@@ -1,0 +1,3 @@
+[submodule "ta/champions-edu-automation"]
+	path = ta/champions-edu-automation
+	url = git@github.com:GH-49355-1/champions-edu-automation.git
