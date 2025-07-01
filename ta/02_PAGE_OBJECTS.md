@@ -13,7 +13,7 @@
 
 ## 🎓 What You'll Learn
 
-**From This** (Bad):
+**From This** (Anti-Pattern):
 ```typescript
 // Messy, hard to maintain
 await page.fill('#todo-title', 'Learn POM');
@@ -33,7 +33,7 @@ await todoPage
 
 ## 🔍 Step 1: Study the Anti-Patterns (10 min)
 
-### Analyze the "Bad" Example
+### Analyze the Anti-Pattern Example
 
 1. **Open**: `workspace/practice-artifacts/basic-todo-for-refactoring.spec.ts`
 
@@ -222,6 +222,9 @@ npx playwright test tests/02-professional-todo.spec.ts
 # Compare complexity - your new test should be much cleaner! 
 ```
 
+### ☝️ Practical Tips
+**Experiment with prompt detail levels** - Modern AI models like Claude 3.7 and Claude 4 understand software best practices. Try both detailed instructions and more concise prompts to see if the AI still follows object-oriented design principles. Find the optimal approach that preserves context window space while delivering quality results.
+
 ---
 
 ## 🎯 Key Benefits You've Achieved
@@ -250,25 +253,17 @@ npx playwright test tests/02-professional-todo.spec.ts
 
 ## 🆘 Troubleshooting
 
-**Page object not working?**
-```bash
-# Check TypeScript compilation
-cd workspace
-npm run build
-
-# Verify imports are correct
-# Check file paths and export/import statements
-```
-
 **Tests still fragile?**
 - Ensure you're using data-testid attributes from Exercise 1
-- Add proper waits in page object methods
-- Implement retry logic for flaky operations
+- Use Playwright [locators](https://playwright.dev/docs/locators) with built-in waits 
+- Implement retry logic for flaky operations 
 
 **AI generating poor code?**
 - Be more specific about patterns you want
 - Provide examples from the sample POM file
 - Ask for explanations of design decisions
+- Try in an Agent Mode
+- Try in a new window
 
 ---
 
