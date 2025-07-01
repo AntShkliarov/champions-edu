@@ -13,7 +13,7 @@
 - **📝 Note**: Examples use Cursor IDE commands, but adapt to your chosen tool
 
 **📋 Required**:
-- Node.js 18+
+- Node.js 22+
 - TypeScript familiarity  
 - Git basics
 
