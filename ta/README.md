@@ -42,18 +42,4 @@ npm install
 npx playwright install
 npm run setup-check
 ```
-
-## What You'll Master
-
-**🎯 Exercise 1**: Smart Locators - AI-powered selector generation  
-**🔄 Exercise 2**: Page Object Model - Professional test architecture   
-**🌐 Exercise 3**: API Testing - Comprehensive backend validation  
-**🔧 Exercise 4**: Advanced Patterns - Production-ready code  
-
-**🎉 Result**: Champion-level AI-assisted test automation skills
-
----
-
-**👉 Begin your journey: [01_START_HERE.md](./01_START_HERE.md)**
-
 *For Associates transitioning to become AI Champions within their delivery teams* 
