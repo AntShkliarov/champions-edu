@@ -6,7 +6,7 @@ Welcome to the Champions-Edu repository - a comprehensive educational resource d
 
 This repository contains structured learning materials for two main educational tracks:
 
-- **TA (Teaching Assistant) Track**: Focused on AI coding assistants, tools, and practical implementation
+- **TA (Test Automation) Track**: Focused on AI coding assistants, tools, and practical implementation
 - **QC (Quality Control) Track**: Centered on AI applications in quality assurance and testing
 
 ## 🗂️ Repository Structure
@@ -18,7 +18,7 @@ champions-edu/
 │   │   ├── 01_Coding_Assistants_Intro.md
 │   │   ├── 02_Github_Copilot_Intro.md
 │   │   ├── 03_Cursor_Intro.md
-│   │   └── 04_Theory_Quiz.md
+│   │   └── 04_Coding_Assistants_Quiz.md
 │   └── practice/                # Hands-on exercises and labs
 ├── qc/                          # Quality Control Materials
 │   └── Week2_general_information.ipynb
@@ -71,7 +71,7 @@ Deep dive into GitHub Copilot:
 Introduction to Cursor IDE and its AI capabilities
 
 ### Module 4: Theory Assessment
-**File:** `ta/theory/04_Theory_Quiz.md`
+**File:** `ta/theory/04_Coding_Assistants_Quiz.md`
 
 Assessment quiz to test understanding of AI coding assistants concepts and practices
 
@@ -106,7 +106,7 @@ Structured weekly curriculum including:
 ### For TA Track
 1. Start with Module 1: `ta/theory/01_Coding_Assistants_Intro.md`
 2. Progress through modules sequentially (Modules 1-3)
-3. Complete the theory assessment: `ta/theory/04_Theory_Quiz.md`
+3. Complete the theory assessment: `ta/theory/04_Coding_Assistants_Quiz.md`
 4. Use `ta/practice/` for hands-on exercises
 
 ### For QC Track
@@ -115,49 +115,6 @@ Structured weekly curriculum including:
 3. Participate in group discussions and check-ins
 4. Submit deliverables as specified
 
-## 🛠️ Tools and Technologies Covered
-
-### AI Coding Assistants
-- **GitHub Copilot** - Industry-leading AI pair programmer
-- **Cursor** - AI-first code editor with advanced agent capabilities
-- **Claude Models** - Advanced reasoning and code generation
-- **GPT Models** - Versatile coding assistance
-
-### Supporting Technologies
-- Model Context Protocol (MCP)
-- Various testing frameworks
-- Browser automation tools
-- Development environment integrations
-
-## 📋 Best Practices
-
-### Effective Prompting
-- Use specific, context-rich prompts
-- Leverage `@` tagging for file and context references
-- Implement one-shot or few-shot prompting techniques
-- Maintain consistency with project coding standards
-
-### Model Selection
-- Choose thinking models for complex features
-- Use simpler models for straightforward implementations
-- Consider context window limitations
-- Match model complexity to task requirements
-
-### Agent Mode Usage
-- Ideal for multi-file refactoring and systematic changes
-- Excellent for test creation and documentation generation
-- Requires proper context and rule configuration
-- Best suited for repetitive, pattern-based tasks
-
-## 🤝 Contributing
-
-This educational repository is designed for structured learning. If you're an instructor or contributor:
-
-1. Follow the established module structure
-2. Maintain consistency in documentation format
-3. Include practical examples and exercises
-4. Update the README when adding new content
-
 ## 📞 Support
 
 For questions about the curriculum or technical issues:
@@ -165,10 +122,6 @@ For questions about the curriculum or technical issues:
 - Complete the theory assessment to test your understanding
 - Consult the best practices guidelines in the module content
 - Engage with the learning community during group sessions
-
-## 📄 License
-
-This educational content is designed for internal training and development purposes. Please review your organization's policies regarding AI tool usage and content sharing.
 
 ---
 
