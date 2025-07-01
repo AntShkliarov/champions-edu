@@ -13,7 +13,7 @@ This repository contains structured learning materials for two main educational 
 
 ```
 champions-edu/
-├── ta/                          # Teaching Assistant Materials
+├── ta/                          # Test Automation Materials
 │   ├── theory/                  # Theoretical content and guides
 │   │   ├── 01_Coding_Assistants_Intro.md
 │   │   ├── 02_Github_Copilot_Intro.md
@@ -21,24 +21,22 @@ champions-edu/
 │   │   └── 04_Coding_Assistants_Quiz.md
 │   └── practice/                # Hands-on exercises and labs
 ├── qc/                          # Quality Control Materials
-│   └── Week2_general_information.ipynb
+│   ├── Week2_general_information.ipynb
+│   ├── Prompting_Fundamentals__.ipynb
+│   ├── Prompt (basic).ipynb
+│   ├── Framework (basic).ipynb
+│   ├── Assistants.ipynb
+│   └── Quiz(Prompting).html
 └── README.md                    # This file
 ```
 
 ## 🎯 Learning Objectives
 
 ### TA Track Objectives
-- Master modern AI coding assistants (GitHub Copilot, Cursor, and others)
-- Understand model selection strategies and best practices
-- Learn agent mode capabilities and workflow automation
-- Implement effective prompting techniques and context management
-- Utilize Model Context Protocol (MCP) for enhanced development workflows
+Master AI coding assistants like GitHub Copilot and Cursor, focusing on model selection, agent workflows, and effective prompting for test automation.
 
 ### QC Track Objectives
-- Deepen understanding of LLMs and GenAI foundations
-- Develop practical prompting skills for quality assurance
-- Explore AI tools for testing and quality control
-- Learn policy compliance and best practices
+Build expertise in LLMs, prompt engineering fundamentals, and AI-powered quality assurance techniques through hands-on exercises.
 
 ## 📖 TA Track Content
 
@@ -57,71 +55,59 @@ Comprehensive introduction covering:
 ### Module 2: GitHub Copilot
 **File:** `ta/theory/02_Github_Copilot_Intro.md`
 
-Deep dive into GitHub Copilot:
-- Getting started and essential features
-- Available AI models (OpenAI, Anthropic, Google)
-- Commands and chat functionality (`/`, `#`, `@` operators)
-- Custom instructions and prompts
-- MCP usage and extensions
-- Best practices for task-oriented development
+Complete GitHub Copilot tutorial including available models, chat commands, custom instructions, and development best practices.
 
 ### Module 3: Cursor Introduction
 **File:** `ta/theory/03_Cursor_Intro.md`
 
-Introduction to Cursor IDE and its AI capabilities
+Introduction to Cursor IDE and its AI-powered development capabilities.
 
 ### Module 4: Theory Assessment
 **File:** `ta/theory/04_Coding_Assistants_Quiz.md`
 
-Assessment quiz to test understanding of AI coding assistants concepts and practices
+Assessment quiz to test understanding of AI coding assistants concepts and practices.
 
 ## 📊 QC Track Content
 
 ### Week 2: General Information
 **File:** `qc/Week2_general_information.ipynb`
 
-Structured weekly curriculum including:
-- **Step 1: Deepening the Basics** (2 days)
-  - LLM fundamentals and GenAI foundations
-  - Prompting techniques and frameworks
-  - Individual exercises and group discussions
+Structured weekly curriculum covering LLM fundamentals, prompting techniques, and AI tool exploration with practical exercises.
 
-- **Step 2: Mid-week Check-in** (Day 5)
-  - Progress assessment and feedback collection
-  - Tool comparison discussions
-  - Adjustment planning
+### Prompting Fundamentals
+**File:** `qc/Prompting_Fundamentals__.ipynb`
 
-- **Step 3: Tools Exploration** (2 days)
-  - AI tool comparison and selection
-  - Practical prompt construction
-  - Policy compliance and best practices
+Comprehensive resource collection for mastering prompt engineering with video tutorials, documentation, and practical examples.
+
+### Basic Prompting Practice
+**Files:** `qc/Prompt (basic).ipynb` and `qc/Framework (basic).ipynb`
+
+Hands-on notebooks with basic prompt examples and framework applications for practical learning.
+
+### AI Assistants Overview
+**File:** `qc/Assistants.ipynb`
+
+Educational material covering Claude, ChatGPT, and Gemini with model comparisons, tokenization concepts, and customization strategies.
+
+### Assessment
+**File:** `qc/Quiz(Prompting).html`
+
+Interactive quiz to test prompting knowledge and skills.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Basic understanding of software development concepts
-- Familiarity with version control (Git)
-- Access to AI coding assistant tools (GitHub Copilot, Cursor, etc.)
+Basic understanding of software development and access to AI tools (GitHub Copilot, Cursor, etc.).
 
 ### For TA Track
-1. Start with Module 1: `ta/theory/01_Coding_Assistants_Intro.md`
-2. Progress through modules sequentially (Modules 1-3)
-3. Complete the theory assessment: `ta/theory/04_Coding_Assistants_Quiz.md`
-4. Use `ta/practice/` for hands-on exercises
+Start with Module 1, progress through all modules sequentially, complete the assessment quiz, and practice in the hands-on exercises.
 
 ### For QC Track
-1. Review the weekly structure in `qc/Week2_general_information.ipynb`
-2. Complete required materials and activities
-3. Participate in group discussions and check-ins
-4. Submit deliverables as specified
+Begin with Week 2 general information, study prompting fundamentals, practice with basic exercises, explore AI assistants overview, and complete the assessment quiz.
 
 ## 📞 Support
 
-For questions about the curriculum or technical issues:
-- Review the relevant module documentation
-- Complete the theory assessment to test your understanding
-- Consult the best practices guidelines in the module content
-- Engage with the learning community during group sessions
+For questions about the curriculum or technical issues, review the relevant module documentation, complete assessments to test understanding, and engage with the learning community during group sessions.
 
 ---
 
