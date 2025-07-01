@@ -18,12 +18,8 @@ champions-edu/
 │   │   ├── 01_Coding_Assistants_Intro.md
 │   │   ├── 02_Github_Copilot_Intro.md
 │   │   ├── 03_Cursor_Intro.md
-│   │   ├── 05_Cursor_Advanced.md
-│   │   ├── 05_TA_Application.ipynb
-│   │   ├── 06_Tips.ipynb
-│   │   └── 07_Quiz.ipynb
-│   ├── practice/                # Hands-on exercises and labs
-│   └── workspace/               # Development workspace
+│   │   └── 04_Theory_Quiz.md
+│   └── practice/                # Hands-on exercises and labs
 ├── qc/                          # Quality Control Materials
 │   └── Week2_general_information.ipynb
 └── README.md                    # This file
@@ -74,15 +70,10 @@ Deep dive into GitHub Copilot:
 
 Introduction to Cursor IDE and its AI capabilities
 
-### Module 4: Advanced Cursor Features
-**File:** `ta/theory/05_Cursor_Advanced.md`
+### Module 4: Theory Assessment
+**File:** `ta/theory/04_Theory_Quiz.md`
 
-Advanced techniques and workflows in Cursor
-
-### Interactive Learning Materials
-- **Application Notebook:** `ta/theory/05_TA_Application.ipynb`
-- **Tips and Tricks:** `ta/theory/06_Tips.ipynb`
-- **Assessment Quiz:** `ta/theory/07_Quiz.ipynb`
+Assessment quiz to test understanding of AI coding assistants concepts and practices
 
 ## 📊 QC Track Content
 
@@ -114,9 +105,9 @@ Structured weekly curriculum including:
 
 ### For TA Track
 1. Start with Module 1: `ta/theory/01_Coding_Assistants_Intro.md`
-2. Progress through modules sequentially
-3. Complete hands-on exercises in `ta/practice/`
-4. Use `ta/workspace/` for practical implementations
+2. Progress through modules sequentially (Modules 1-3)
+3. Complete the theory assessment: `ta/theory/04_Theory_Quiz.md`
+4. Use `ta/practice/` for hands-on exercises
 
 ### For QC Track
 1. Review the weekly structure in `qc/Week2_general_information.ipynb`
@@ -171,8 +162,8 @@ This educational repository is designed for structured learning. If you're an in
 
 For questions about the curriculum or technical issues:
 - Review the relevant module documentation
-- Check the tips and tricks sections
-- Consult the best practices guidelines
+- Complete the theory assessment to test your understanding
+- Consult the best practices guidelines in the module content
 - Engage with the learning community during group sessions
 
 ## 📄 License
