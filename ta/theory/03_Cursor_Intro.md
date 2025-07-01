@@ -59,6 +59,13 @@ Agent is Cursor’s AI assistant that lives in your sidebar, letting you interac
 [DOCS - Working with MCPs in Cursor](https://docs.cursor.com/context/model-context-protocol)
 
 
+## Quiz
+
+[Theory Quiz](./04_Theory_Quiz.md)
+
+
+
+
 
 
 
