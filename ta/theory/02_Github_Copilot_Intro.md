@@ -37,7 +37,7 @@ You can enhance your experience of Copilot Chat with a variety of commands and o
 `@` - [Chat Participants](https://docs.github.com/en/copilot/reference/github-copilot-chat-cheat-sheet#chat-participants)
 
 **Further Reading:**
-1. [Github Copilot Chat Cheat Sheet](https://docs.github.com/en/copilot/reference/github-copilot-chat-cheat-sheet)
+1. [GitHub Copilot Chat Cheat Sheet](https://docs.github.com/en/copilot/reference/github-copilot-chat-cheat-sheet)
 
 
 ### Github Copilot Prompts and Instructions
