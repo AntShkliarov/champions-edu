@@ -1,7 +1,7 @@
-# 🤖 Supplementary: Playwright MCP Integration
+# 🤖 05. Playwright MCP Integration
 
 > **📚 This is optional advanced content**  
-> Complete the main course in [PRACTICUM_GUIDE.md](./PRACTICUM_GUIDE.md) first before exploring MCP integration.
+> Complete the main course modules (01-04) first before exploring MCP integration.
 
 ---
 
@@ -19,7 +19,7 @@
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ installed
+- Node.js 22+ installed
 - Playwright project set up
 - Cursor AI or compatible MCP client
 

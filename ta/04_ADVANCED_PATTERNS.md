@@ -1,5 +1,8 @@
 # 🔧 04. Advanced Patterns - Production-Ready Code
 
+> **📚 This is optional advanced content**  
+> Complete the main course modules (01-03) before exploring these advanced patterns.
+
 **Master enterprise-level test automation with AI assistance!**
 
 ⏱️ **This Session**: 45 minutes  
@@ -7,7 +10,7 @@
 🛠 **AI Assistant**: Cursor IDE (primary) or GitHub Copilot, Gemini, Windsurf, RooCode  
 📝 **Note**: Examples use Cursor commands - adapt `Cmd/Ctrl + L` to your AI tool  
 📋 **Prerequisites**: Completed `03_API_TESTING.md`  
-📋 **Next**: Optional `99_MCP_OPTIONAL.md` for advanced AI integration
+📋 **Next**: Optional `05_MCP_OPTIONAL.md` for advanced AI integration
 
 ---
 
@@ -342,7 +345,7 @@ Data Export:
 
 **✅ Mastered Advanced Patterns?**
 
-**Option 1**: **[99_MCP_OPTIONAL.md](./99_MCP_OPTIONAL.md)** - Advanced AI integration  
+**Option 1**: **[05_MCP_OPTIONAL.md](./05_MCP_OPTIONAL.md)** - Advanced AI integration  
 **Option 2**: **Apply to Real Projects** - Use these patterns in your actual work
 
 ## 🎯 Enterprise Benefits Achieved

@@ -7,7 +7,7 @@
 🛠 **AI Assistant**: Cursor IDE (primary) or GitHub Copilot, Gemini, Windsurf, RooCode  
 📝 **Note**: Examples use Cursor commands - adapt `Cmd/Ctrl + L` to your AI tool  
 📋 **Prerequisites**: Completed `02_PAGE_OBJECTS.md`  
-📋 **Next**: Continue to `04_ADVANCED_PATTERNS.md`
+📋 **Next**: Optional `04_ADVANCED_PATTERNS.md` for advanced patterns
 
 ---
 
@@ -68,7 +68,7 @@ await ApiTestBuilder
    Then suggest a comprehensive testing strategy.
    ```
 
-2. **Study the Swagger**: Open `workspace/practice-artifacts/public-api-swagger.yaml`
+2. **Study the Swagger**: Open `workspace/practice-artifacts/public-api-swagger.yaml` in [https://editor.swagger.io](https://editor.swagger.io/)
 
 ---
 
@@ -314,9 +314,8 @@ curl https://jsonplaceholder.typicode.com/posts/1
 
 **✅ Completed Exercise 3?**
 
-👉 **Continue to: `04_ADVANCED_PATTERNS.md`**
-
-You'll learn advanced patterns like parallel execution, test reporting, and CI/CD integration with AI assistance.
+**Option 1**: **[04_ADVANCED_PATTERNS.md](./04_ADVANCED_PATTERNS.md)** - Production-Ready Code (optional)  
+**Option 2**: **Apply Your Skills** - Use these patterns in your actual work
 
 **💡 Pro Tip**: API testing often catches integration issues that UI tests miss!
 

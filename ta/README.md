@@ -14,8 +14,8 @@
 01_START_HERE.md        ← 🚀 Setup + Smart Locators (40 min)
 02_PAGE_OBJECTS.md      ← 🔄 Professional Architecture (45 min)  
 03_API_TESTING.md       ← 🌐 Backend Validation (30 min)
-04_ADVANCED_PATTERNS.md ← 🔧 Production-Ready Code (45 min)
-99_MCP_OPTIONAL.md      ← 🤖 Advanced AI Integration (optional)
+04_ADVANCED_PATTERNS.md ← 🔧 Production-Ready Code (45 min, optional)
+05_MCP_OPTIONAL.md      ← 🤖 Advanced AI Integration (optional)
 ```
 
 **Total Time**: 2.5 hours of focused, hands-on learning
