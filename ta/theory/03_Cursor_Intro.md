@@ -61,7 +61,7 @@ Agent is Cursor’s AI assistant that lives in your sidebar, letting you interac
 
 ## Quiz
 
-[Theory Quiz](./04_Theory_Quiz.md)
+[Theory Quiz](./04_Coding_Assistants_Quiz.md)
 
 
 
