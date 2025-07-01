@@ -53,25 +53,8 @@ Construct an effective prompt using @ tagging that would help a coding assistant
 2. How to structure the prompt for maximum clarity
 3. What potential issues might arise and how to prevent them
 
----
 
-## Question 4: MCP Integration Strategy
-
-Your development team wants to implement MCP for browser automation testing with Playwright. Consider these integration scenarios:
-
-**Scenario A:** Using MCP for live locator verification during test development
-**Scenario B:** Using MCP for real-time debugging of failing tests
-**Scenario C:** Using MCP for interactive test development with user flow validation
-
-For each scenario:
-1. Describe the specific MCP capabilities that would be most valuable
-2. Identify potential challenges or limitations
-3. Explain how this would change your typical development workflow
-4. What safety considerations should be implemented?
-
----
-
-## Question 5: Coding Assistant Rules Design
+## Question 4: Coding Assistant Rules Design
 
 You're establishing Coding Assistant Rules for a React TypeScript project that uses:
 - Jest for testing with custom matchers
@@ -85,64 +68,6 @@ Design a comprehensive Coding Assistant Rules strategy that addresses:
 2. How would you handle the "over-engineering" tendency of Claude models?
 3. What workflow documentation would be most valuable?
 4. How would you balance automation with developer decision-making?
-
----
-
-## Question 6: Cross-Platform Feature Comparison
-
-A development team is choosing between GitHub Copilot and Cursor for their main development workflow. They need:
-- Multi-file refactoring capabilities
-- Integration with existing VS Code extensions
-- Custom instruction support
-- Advanced context management
-- Team collaboration features
-
-Analyze both platforms and provide:
-1. A detailed comparison of how each platform handles these requirements
-2. Specific scenarios where one platform significantly outperforms the other
-3. How the choice of AI models available on each platform impacts the decision
-4. Integration considerations with existing development workflows
-
----
-
-## Question 7: Prompt Engineering for Complex Tasks
-
-You need to implement a data migration script that:
-- Reads from multiple database tables
-- Transforms data according to business rules
-- Handles error cases and rollback scenarios
-- Generates migration reports
-- Follows company security protocols
-
-Design a prompt strategy that:
-1. Maximizes the likelihood of generating secure, robust code
-2. Ensures the assistant understands the critical nature of data integrity
-3. Incorporates proper error handling and logging
-4. Follows your organization's coding standards
-5. Addresses the "hallucination" problem common in AI-generated code
-
----
-
-## Question 8: Advanced Context and Workflow Integration
-
-Your team maintains a microservices architecture with:
-- 12 different services
-- Shared libraries and utilities
-- Complex inter-service communication
-- Comprehensive testing strategies
-- CI/CD pipelines with specific requirements
-
-You want to use coding assistants to help with cross-service feature development. Design a comprehensive approach that addresses:
-
-1. **Context Management:** How would you structure your prompts and context to help the assistant understand cross-service dependencies?
-
-2. **Consistency Enforcement:** What strategies would ensure consistent implementation patterns across services?
-
-3. **Risk Mitigation:** How would you prevent the assistant from introducing breaking changes or security vulnerabilities?
-
-4. **Workflow Integration:** How would you integrate assistant-generated code with your existing code review and testing processes?
-
-5. **Knowledge Transfer:** How would you capture and share the assistant's insights about your architecture with the team?
 
 ---
 

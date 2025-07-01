@@ -12,7 +12,7 @@ Cursor is provided a company-wide free license, request via MyApps with your man
 
 ## 🔍 Cursor Features and Capabilities
 
-### Cursor Models
+### 🔍 Cursor Models
 
 Cursor is offering a wide range of models, including the latest state-of-the-art models:
 - Claude 4 Sonnet, 3.7 Sonnet, 3.5 Sonnet, 4 Opus
@@ -24,7 +24,7 @@ Cursor is offering a wide range of models, including the latest state-of-the-art
 
 [GUIDE - Selecting Models in Cursor](https://docs.cursor.com/guides/selecting-models)
 
-### Cursor Modes and Commands
+### 🔍 Cursor Modes and Commands
 
 **What is Agent?**
 
@@ -40,26 +40,26 @@ Agent is Cursor’s AI assistant that lives in your sidebar, letting you interac
 
 - [`@` Commands in Cursor](https://docs.cursor.com/context/@-symbols/overview)
 
-### Cursor Rules and Context Management
+### 🔍 Cursor Rules and Context Management
 
-1. [**Checkpoints**](https://docs.cursor.com/chat/overview#checkpoints)
+1. [Checkpoints](https://docs.cursor.com/chat/overview#checkpoints)
 
-2. [**Rules**](https://docs.cursor.com/context/rules)
+2. [Rules](https://docs.cursor.com/context/rules)
 
-3. [**Managing Long Conversations**](https://docs.cursor.com/chat/overview#managing-long-conversations)
+3. [Managing Long Conversations](https://docs.cursor.com/chat/overview#managing-long-conversations)
 
-4. [**Ignoring Files**](https://docs.cursor.com/context/ignore-files)
+4. [Ignoring Files](https://docs.cursor.com/context/ignore-files)
 
-[GUIDE - How to work with Context in Cursor](https://docs.cursor.com/guides/working-with-context)
+- GUIDE - [How to work with Context in Cursor](https://docs.cursor.com/guides/working-with-context)
 
-[GUIDE - Working with Documentation in Cursor](https://docs.cursor.com/guides/advanced/working-with-documentation)
+- GUIDE - [Working with Documentation in Cursor](https://docs.cursor.com/guides/advanced/working-with-documentation)
 
-### Cursor MCPs
+### 🔍 Cursor MCPs
 
-[DOCS - Working with MCPs in Cursor](https://docs.cursor.com/context/model-context-protocol)
+- DOCS - [Working with MCPs in Cursor](https://docs.cursor.com/context/model-context-protocol)
 
 
-## Quiz
+## 📝 Quiz
 
 [Theory Quiz](./04_Coding_Assistants_Quiz.md)
 
