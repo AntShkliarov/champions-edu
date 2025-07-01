@@ -118,6 +118,14 @@ Prioritize accessibility and semantic meaning over CSS classes.
 npx playwright test 01-smart-locators.spec.ts --headed
 ```
 
+### Practical Tips
+
+1. **Use latest AI models** to receive better results (this workshop has been tested with Claude 3.7 Sonnet and Claude 4)
+2. **Use Cursor's Agent mode** to create files automatically and make direct code changes
+3. **Let AI fix failing tests** - When tests fail, let AI to find solutions 
+4. **Use keyboard shortcuts** - Press Ctrl+Z in chat's terminal after opening test reports to continue execution/ autofixing errors
+5. **Be specific in your prompts** - Include details about what you're trying to test and the expected behavior
+
 ### Self-Evaluation Checklist
 
 **✅ Locator Quality**:
@@ -174,14 +182,6 @@ cd workspace
 rm -rf node_modules package-lock.json
 npm install
 npx playwright install
-```
-
-**Can't open HTML file?**
-```bash
-# Try alternative
-cd workspace
-python -m http.server 3000
-# Then visit: http://localhost:3000/practice-artifacts/sample-todo-page.html
 ```
 
 ---
