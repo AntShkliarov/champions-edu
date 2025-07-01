@@ -1,4 +1,4 @@
-# Self-Check Quiz: Coding Assistants Theory
+# Self-Check Quiz: Coding Assistants - Theory
 
 ## Instructions
 This quiz tests your understanding of coding assistants theory from Modules 1-3. Each question requires thoughtful analysis rather than simple recall. Consider the practical implications and strategic aspects of using coding assistants effectively.
