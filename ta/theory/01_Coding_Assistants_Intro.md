@@ -43,7 +43,7 @@ These models excel in understanding complex requirements and generating comprehe
 **The Over-Engineering Challenge**
 * Claude models are prone to over-complication.
     * ✅ For simple tasks, that are straightforward to implement, consider using GPT-4o GPT-4.1, Gemini 2.5 Pro, or Claude 3.5 models
-    * ✅ Context Window tends to fill up quickly, so for the long chats consider summarizing the intermid results into some kind of a file and start a new chat with it.
+    * ✅ Context Window tends to fill up quickly, so for the long chats consider summarizing the intermediate results into some kind of a file and start a new chat with it.
 
 2. **Thinking vs. Non-Thinking Models**
 
