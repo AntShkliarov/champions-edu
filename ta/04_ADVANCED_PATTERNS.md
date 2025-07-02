@@ -345,8 +345,9 @@ Data Export:
 
 **✅ Mastered Advanced Patterns?**
 
-**Option 1**: **[05_MCP_OPTIONAL.md](./05_MCP_OPTIONAL.md)** - Advanced AI integration  
-**Option 2**: **Apply to Real Projects** - Use these patterns in your actual work
+**Option 1**: **[05_MCP_OPTIONAL.md](./05_MCP_OPTIONAL.md)** - Advanced AI integration (Agent Mode)  
+**Option 2**: **[05_CURSOR_CHAT_PRACTICE.md](./05_CURSOR_CHAT_PRACTICE.md)** - Cursor Chat Practice Exercises  
+**Option 3**: **Apply to Real Projects** - Use these patterns in your actual work
 
 ## 🎯 Enterprise Benefits Achieved
 

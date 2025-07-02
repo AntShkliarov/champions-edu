@@ -16,6 +16,7 @@
 03_API_TESTING.md       ← 🌐 Backend Validation (30 min)
 04_ADVANCED_PATTERNS.md ← 🔧 Production-Ready Code (45 min, optional)
 05_MCP_OPTIONAL.md      ← 🤖 Advanced AI Integration (optional)
+05_CURSOR_CHAT_PRACTICE.md ← 💬 Cursor Chat Practice Exercises (optional)
 ```
 
 **Total Time**: 2.5 hours of focused, hands-on learning

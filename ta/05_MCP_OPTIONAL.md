@@ -9,55 +9,40 @@
 
 ## What is Playwright MCP?
 
-**MCP (Model Context Protocol)** is a standardized way for AI tools to interact with external systems. The Playwright MCP server allows AI assistants like Cursor to:
+**MCP (Model Context Protocol)** is a standardized way for AI tools to interact with external systems. The Playwright MCP server, developed by Microsoft, allows AI assistants like Cursor to:
 
 - Control browsers directly through natural language
+- Interact with web pages through structured accessibility snapshots
 - Generate tests by observing page interactions  
 - Debug tests interactively with AI assistance
 - Provide real-time guidance during test development
 
+This official package (`@playwright/mcp`) is actively maintained by the Microsoft Playwright team and has over 100,000 weekly downloads.
+
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 22+ installed
 - Playwright project set up
-- Cursor AI or compatible MCP client
+- Cursor AI (latest version)
 
-### Installation
+### Cursor MCP Setup
 
-```bash
-# Install the Playwright MCP server
-npm install -g @modelcontextprotocol/server-playwright
+Cursor IDE has built-in MCP support for Playwright - no manual installation required!
 
-# Or for local project
-npm install --save-dev @modelcontextprotocol/server-playwright
-```
-
-### Configuration
-
-1. **Create MCP Configuration** (`mcp-config.json`):
-```json
-{
-  "mcpServers": {
-    "playwright": {
-      "command": "npx",
-      "args": ["@modelcontextprotocol/server-playwright"],
-      "env": {
-        "PLAYWRIGHT_BROWSER": "chromium",
-        "PLAYWRIGHT_HEADLESS": "false"
-      }
-    }
-  }
-}
-```
-
-2. **Configure Cursor for MCP**:
+1. **Enable MCP in Cursor**:
    - Open Cursor Settings
-   - Navigate to "Extensions" → "MCP"
-   - Add the configuration file path
-   - Restart Cursor
+   - Navigate to "Tools & Integrations" → "MCP"
+   - Ensure MCP is enabled
+   - Restart Cursor if needed
 
-## 🎯 Practical Examples
+2. **Using MCP in Cursor**:
+   - When you ask Cursor to interact with a browser, it will request permission
+   - Grant permission when prompted to allow browser automation
+   - Cursor will handle starting the MCP server and browser instance automatically
+
+> **Note**: Unlike other AI tools, Cursor doesn't require you to manually install or configure the MCP server - it's all built in!
+
+## 🎯 Practical Examples (Agent Mode Only *)
 
 ### Example 1: AI-Guided Test Creation
 
@@ -74,6 +59,13 @@ Guide me through each step and explain what you're doing.
 ```
 
 **Expected MCP Interaction:**
+When you run this prompt, the AI will:
+1. Request permission to execute Playwright MCP commands (like `browser_navigate`, `browser_snapshot`, `browser_click`, etc.)
+2. When you approve these actions, a browser window will open automatically
+3. The AI will navigate to the todo application.
+
+You'll see the AI-driven browser in action as it completes each step, providing a visual demonstration of test automation.
+
 ```typescript
 // MCP will help generate this test interactively
 test('AI-guided todo creation', async ({ page }) => {
@@ -139,36 +131,30 @@ Use MCP to analyze the todo page and:
 Provide detailed analysis with reasoning.
 ```
 
-**MCP Analysis Output:**
-```typescript
-// MCP generates comprehensive page analysis
-interface MCPPageAnalysis {
-  elements: {
-    forms: Array<{
-      selector: string;
-      purpose: string;
-      testId: string;
-      recommendation: string;
-    }>;
-    buttons: Array<{
-      selector: string;
-      action: string;
-      reliability: 'high' | 'medium' | 'low';
-      suggestion: string;
-    }>;
-    lists: Array<{
-      selector: string;
-      itemSelector: string;
-      dynamicContent: boolean;
-      testStrategy: string;
-    }>;
-  };
-  recommendations: {
-    pageObjectStructure: string;
-    testDataStrategy: string;
-    reliabilityImprovements: string[];
-  };
-}
+**Expected MCP Analysis Output:**
+
+The AI will provide a detailed analysis including:
+
+```
+# Todo Application Analysis
+
+## 1. Interactive Elements Identified
+- Form controls (inputs, dropdowns, buttons)
+- Filter buttons and search box
+- Todo item checkboxes and action buttons
+- Status counters
+
+## 2. Optimal Test Data IDs
+Suggestions for data-testid attributes for reliable element selection
+
+## 3. Page Object Model
+A complete TypeScript class with locators and methods
+
+## 4. Recommended Testing Strategies
+- Functional testing approaches
+- Edge cases to consider
+- Visual and accessibility testing recommendations
+```
 ```
 
 ## 🛠️ Advanced MCP Patterns
@@ -329,43 +315,26 @@ Provide before/after comparisons with timing data."
 
 **1. MCP Server Not Starting**
 ```bash
-# Check installation
-npm list @modelcontextprotocol/server-playwright
-
-# Reinstall if needed
-npm uninstall -g @modelcontextprotocol/server-playwright
-npm install -g @modelcontextprotocol/server-playwright
+# No installation needed with Cursor!
+# Just make sure MCP is enabled in Cursor settings
 ```
 
 **2. Cursor Not Connecting to MCP**
-- Verify MCP configuration in Cursor settings
-- Check firewall/security settings
+- Ensure MCP is enabled in Cursor settings (Tools & Integrations → MCP)
+- Check that you've granted browser control permissions when prompted
 - Restart Cursor completely
-- Review MCP server logs
+- Check your internet connection
 
 **3. MCP Commands Not Working**
-- Ensure Playwright is properly installed
-- Check browser availability
-- Verify page accessibility
-- Review MCP server permissions
-
-### Debug Commands
-
-```bash
-# Test MCP server directly
-npx @modelcontextprotocol/server-playwright --help
-
-# Check MCP connection
-curl -X POST http://localhost:3000/mcp/health
-
-# View MCP logs
-tail -f ~/.cursor/mcp-logs/playwright.log
-```
+- Make sure you're approving the MCP permission requests
+- Check that the URL you're trying to access is valid
+- Try refreshing the page or restarting the browser
+- If testing local files, ensure they exist at the specified path
 
 ## 🚀 Next Steps
 
 ### Immediate Actions
-1. **Set up MCP**: Follow installation and configuration steps
+1. **Enable MCP**: Make sure MCP is enabled in Cursor settings
 2. **Try Basic Example**: Start with simple page navigation
 3. **Practice Prompting**: Experiment with different AI requests
 4. **Document Learnings**: Keep track of effective prompts
@@ -379,8 +348,7 @@ tail -f ~/.cursor/mcp-logs/playwright.log
 ### Learning Resources
 - [MCP Specification](https://spec.modelcontextprotocol.io/)
 - [Playwright MCP Examples](https://github.com/modelcontextprotocol/servers)
-- [Community Discord](https://discord.gg/playwright)
-- [AI Testing Patterns](https://testautomationu.applitools.com/)
+- [Cursor's MCP Tools](https://docs.cursor.com/tools/)
 
 ---
 
