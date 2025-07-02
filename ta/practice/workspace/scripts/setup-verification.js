@@ -72,16 +72,12 @@ try {
 // Check npm version
 checkCommand('npm --version', 'npm version', 'npm not found');
 
-// Check VS Code installation
-try {
-  const codeVersion = execSync('code --version', { encoding: 'utf8', stdio: 'pipe' });
-  console.log(`✅ VS Code installed: ${codeVersion.split('\n')[0]}`);
-  successes++;
-} catch (error) {
-  console.log('❌ VS Code not found in PATH - install from https://code.visualstudio.com/');
-  console.log('   💡 Tip: After installing, add VS Code to PATH or use full path');
-  errors++;
-}
+// Check for Cursor IDE (recommended but not required)
+console.log('ℹ️ Cursor IDE check: This course works best with Cursor IDE');
+console.log('   💡 Tip: Install Cursor IDE from https://cursor.com/ if not already installed');
+console.log('   💡 Tip: Cursor IDE provides integrated AI assistance for test automation');
+// Not checking version as Cursor might not be in PATH even when installed
+warnings++;
 
 // Check for package.json
 checkSuccess(fs.existsSync('package.json'), 'package.json found');
@@ -104,10 +100,10 @@ const playwrightConfig = fs.existsSync('playwright.config.ts') || fs.existsSync(
 checkSuccess(playwrightConfig, 'Playwright configuration found: playwright.config.ts');
 
 // Check environment template
-checkSuccess(fs.existsSync('.env.example'), 'Environment template found');
+checkSuccess(fs.existsSync('env.example'), 'Environment template found');
 
 // Check required directories
-const requiredDirs = ['src/pages', 'tests/e2e', 'modules', 'resources', 'scripts'];
+const requiredDirs = ['src', 'tests/e2e', 'scripts', 'practice-artifacts'];
 requiredDirs.forEach(dir => {
   checkSuccess(fs.existsSync(dir), `Directory exists: ${dir}`);
 });
@@ -145,18 +141,19 @@ console.log('\n============================================================');
 if (errors === 0) {
   console.log('🎉 Setup verification complete! Ready for AI-assisted testing!');
   console.log('\n📋 MANUAL CHECKS NEEDED:');
-  console.log('   1. Open VS Code and verify Copilot icon in status bar');
-  console.log('   2. Test Copilot: Type "// function to add two numbers" and see suggestions');
-  console.log('   3. Verify GitHub Copilot subscription at: https://github.com/settings/copilot');
-  console.log('\n🚀 Next step: Start Module 1 - modules/01-setup/README.md');
+  console.log('   1. Verify Cursor IDE is installed and running (https://cursor.com/)');
+  console.log('   2. Test Cursor\'s AI assistance: Type "// function to add two numbers" and see suggestions');
+  console.log('   3. Check that you can access Cursor\'s chat with Cmd/Ctrl + L');
+  console.log('   4. Try Cursor\'s inline editing with Cmd/Ctrl + K');
+  console.log('\n🚀 Next step: Start with the first module - ../01_START_HERE.md');
 } else {
   console.log('🔧 Please fix the errors above before proceeding.');
   console.log('\n💡 TROUBLESHOOTING TIPS:');
   console.log('   • Node.js issues: Reinstall from https://nodejs.org/');
-  console.log('   • VS Code issues: Install from https://code.visualstudio.com/');
+  console.log('   • Cursor IDE: Download and install from https://cursor.com/');
   console.log('   • Playwright issues: Run "npx playwright install"');
   console.log('   • npm issues: Run "npm cache clean --force && npm install"');
-  console.log('\n📚 For detailed help: ./setup-instructions.md');
+  console.log('\n📚 For detailed help: See ../01_START_HERE.md');
 }
 
 process.exit(errors > 0 ? 1 : 0); 
