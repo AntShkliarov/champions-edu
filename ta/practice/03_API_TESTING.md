@@ -7,7 +7,7 @@
 🛠 **AI Assistant**: Cursor IDE (primary) or GitHub Copilot, Gemini, Windsurf, RooCode  
 📝 **Note**: Examples use Cursor commands - adapt `Cmd/Ctrl + L` to your AI tool  
 📋 **Prerequisites**: Completed `02_PAGE_OBJECTS.md`  
-📋 **Next**: Optional `04_ADVANCED_PATTERNS.md` for advanced patterns
+📋 **Next**: `04_ADVANCED_PATTERNS.md` (Expert Track) for advanced patterns
 
 ---
 
@@ -164,75 +164,58 @@ class ApiDataFactory {
 
 ---
 
-## 🧪 Step 3: Advanced API Validation (10 min)
+## 🧪 Step 3: Basic API Validation (10 min)
 
-### Implement Schema Validation
+### Implement Simple Validation
 
 1. **Ask AI Assistant**:
    ```
-   Add advanced validation to my API tests:
+   Add basic validation to my API tests:
    
-   Schema Validation:
-   - Create JSON schemas for Post, User, and Comment entities
-   - Implement schema validation using ajv or similar library
-   - Validate both success and error response formats
-   - Test API contract compliance
+   Status Code Validation:
+   - Verify correct status codes for successful requests
+   - Check appropriate error codes for invalid requests
    
-   Performance Testing:
-   - Add response time assertions (< 500ms for individual calls)
-   - Implement load testing patterns
-   - Test concurrent request handling
-   - Monitor memory usage during tests
+   Response Structure:
+   - Validate that responses contain expected fields
+   - Check data types of key fields
    
-   Security Testing:
-   - Validate HTTPS enforcement
-   - Test authentication/authorization (where applicable)
-   - Check for SQL injection vulnerabilities in dynamic endpoints
-   - Verify proper error message sanitization
+   Basic Assertions:
+   - Verify content-type headers
+   - Check response times are reasonable
    
-   Comprehensive Assertions:
-   - Response headers validation
-   - Content-Type verification
-   - CORS headers checking
-   - Rate limiting behavior
-   - Caching headers validation
-   
-   Create helper functions and custom matchers for reusability.
+   Create simple helper functions for common assertions.
    ```
 
-2. **Run your comprehensive tests**:
+2. **Run your API tests**:
    ```bash
    cd workspace
    npx playwright test tests/03-api-comprehensive.spec.ts
    ```
 
-### Example Advanced Test
+### Example Basic Test
 
 ```typescript
-test.describe('JSONPlaceholder API - Advanced Validation', () => {
-  test('should handle complete post lifecycle with validation', async ({ request }) => {
+test.describe('JSONPlaceholder API - Basic Validation', () => {
+  test('should handle post lifecycle with validation', async ({ request }) => {
     const client = new JsonPlaceholderClient(request);
-    const startTime = Date.now();
     
-    // Create post with schema validation
+    // Create post with basic validation
     const newPost = ApiDataFactory.createValidPost();
     const created = await client.createPost(newPost);
     
-    // Validate performance
-    expect(Date.now() - startTime).toBeLessThan(500);
-    
-    // Validate schema compliance
-    expect(created).toMatchSchema(PostSchema);
-    
-    // Test relationships
-    const user = await client.getUser(created.userId);
-    expect(user).toBeDefined();
+    // Basic validations
+    expect(created.id).toBeDefined();
+    expect(created.title).toBe(newPost.title);
+    expect(created.body).toBe(newPost.body);
     
     // Cleanup
     await client.deletePost(created.id);
   });
 });
 ```
+
+> **📚 Note**: Advanced API validation techniques (schema validation, performance testing, security testing, etc.) are covered in the Expert Track module `04_ADVANCED_PATTERNS.md`.
 
 ---
 
@@ -314,8 +297,10 @@ curl https://jsonplaceholder.typicode.com/posts/1
 
 **✅ Completed Exercise 3?**
 
-**Option 1**: **[04_ADVANCED_PATTERNS.md](./04_ADVANCED_PATTERNS.md)** - Production-Ready Code (optional)  
-**Option 2**: **Apply Your Skills** - Use these patterns in your actual work
+**Core Track Complete!** You've mastered the essential skills for AI-assisted test automation.
+
+**Ready for Expert Track?**  
+→ Continue to: **[04_ADVANCED_PATTERNS.md](./04_ADVANCED_PATTERNS.md)** - Production-Ready Code
 
 **💡 Pro Tip**: API testing often catches integration issues that UI tests miss!
 

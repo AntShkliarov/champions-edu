@@ -8,23 +8,35 @@
 
 ## Your Learning Journey
 
-**Crystal clear, numbered progression - no confusion about what's next!**
+**Clear learning paths for all skill levels**
 
+### Core Track (All Associates)
 ```
 01_START_HERE.md        ← 🚀 Setup + Smart Locators (40 min)
 02_PAGE_OBJECTS.md      ← 🔄 Professional Architecture (45 min)  
 03_API_TESTING.md       ← 🌐 Backend Validation (30 min)
-04_ADVANCED_PATTERNS.md ← 🔧 Production-Ready Code (45 min, optional)
-05_MCP_OPTIONAL.md      ← 🤖 Advanced AI Integration (optional)
-05_CURSOR_CHAT_PRACTICE.md ← 💬 Cursor Chat Practice Exercises (optional)
 ```
 
-**Total Time**: 2.5 hours of focused, hands-on learning
+### Expert Track
+```
+04_ADVANCED_PATTERNS.md ← 🔧 Production-Ready Code (45 min)
+05_MCP_OPTIONAL.md      ← 🤖 Advanced AI Integration (optional)
+```
+
+### Supplementary Resources
+```
+CURSOR_FEATURES_PRACTICE.md ← 💬 Cursor Features Practice Guide
+```
+
+**Total Time**: 
+- Core Track: 2 hours
+- Expert Track: Additional 1+ hour
 
 ## Course Overview
 
-- **Duration**: 2.5 hours hands-on practice
-- **Focus**: AI code assistants (Cursor IDE, GitHub Copilot, Gemini, etc.) with Playwright & TypeScript
+- **Structure**: Core track (all associates) + Expert track (advanced users)
+- **Duration**: 2-3 hours total hands-on practice
+- **Focus**: AI code assistants (Cursor IDE primary) with Playwright & TypeScript
 - **Technology**: Professional test automation patterns
 - **Audience**: Engineers ready to champion AI adoption
 

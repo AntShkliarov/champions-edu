@@ -1,7 +1,7 @@
 # 🔧 04. Advanced Patterns - Production-Ready Code
 
-> **📚 This is optional advanced content**  
-> Complete the main course modules (01-03) before exploring these advanced patterns.
+> **📚 Expert Track Content**  
+> Complete the core modules (01-03) before proceeding with this expert-level content.
 
 **Master enterprise-level test automation with AI assistance!**
 
@@ -9,7 +9,7 @@
 🎯 **Goal**: Build production-ready test patterns using AI code assistant  
 🛠 **AI Assistant**: Cursor IDE (primary) or GitHub Copilot, Gemini, Windsurf, RooCode  
 📝 **Note**: Examples use Cursor commands - adapt `Cmd/Ctrl + L` to your AI tool  
-📋 **Prerequisites**: Completed `03_API_TESTING.md`  
+📋 **Prerequisites**: Completed core modules (01-03)  
 📋 **Next**: Optional `05_MCP_OPTIONAL.md` for advanced AI integration
 
 ---
@@ -38,6 +38,28 @@ test('should handle complete user session with resilience', async ({ page }) => 
     .executeLoginFlow(page)
     .expectDashboardAccess()
     .withCleanup();
+});
+```
+
+**From Basic API Tests**:
+```typescript
+// Simple API test
+test('should get posts', async ({ request }) => {
+  const response = await request.get('https://jsonplaceholder.typicode.com/posts');
+  expect(response.status()).toBe(200);
+});
+```
+
+**To Advanced API Validation**:
+```typescript
+// Production-ready API testing
+test('should validate API contract compliance', async ({ request }) => {
+  const client = new ApiClient(request);
+  const response = await client.getPosts();
+  
+  expect(response).toMatchSchema(PostSchema);
+  expect(response.performanceMetrics.responseTime).toBeLessThan(500);
+  expect(response.headers).toContainSecurityHeaders();
 });
 ```
 
@@ -274,7 +296,73 @@ export class RetryableAction {
 
 ---
 
-## 📊 Step 4: Advanced Reporting & Analytics (Optional)
+## 🔍 Step 4: Advanced API Validation (15 min)
+
+### Implement Comprehensive API Testing
+
+1. **Ask AI Assistant**:
+   ```
+   Add advanced validation to my API tests:
+   
+   Schema Validation:
+   - Create JSON schemas for Post, User, and Comment entities
+   - Implement schema validation using ajv or similar library
+   - Validate both success and error response formats
+   - Test API contract compliance
+   
+   Performance Testing:
+   - Add response time assertions (< 500ms for individual calls)
+   - Implement load testing patterns
+   - Test concurrent request handling
+   - Monitor memory usage during tests
+   
+   Security Testing:
+   - Validate HTTPS enforcement
+   - Test authentication/authorization (where applicable)
+   - Check for SQL injection vulnerabilities in dynamic endpoints
+   - Verify proper error message sanitization
+   
+   Comprehensive Assertions:
+   - Response headers validation
+   - Content-Type verification
+   - CORS headers checking
+   - Rate limiting behavior
+   - Caching headers validation
+   
+   Create helper functions and custom matchers for reusability.
+   ```
+
+2. **Create**: `workspace/src/api/ApiValidator.ts`
+
+### Example Advanced API Test
+
+```typescript
+test.describe('JSONPlaceholder API - Advanced Validation', () => {
+  test('should handle complete post lifecycle with validation', async ({ request }) => {
+    const client = new JsonPlaceholderClient(request);
+    const startTime = Date.now();
+    
+    // Create post with schema validation
+    const newPost = ApiDataFactory.createValidPost();
+    const created = await client.createPost(newPost);
+    
+    // Validate performance
+    expect(Date.now() - startTime).toBeLessThan(500);
+    
+    // Validate schema compliance
+    expect(created).toMatchSchema(PostSchema);
+    
+    // Test relationships
+    const user = await client.getUser(created.userId);
+    expect(user).toBeDefined();
+    
+    // Cleanup
+    await client.deletePost(created.id);
+  });
+});
+```
+
+## 📊 Step 5: Advanced Reporting & Analytics (Optional)
 
 ### Enterprise-Grade Test Insights
 
@@ -326,6 +414,12 @@ Data Export:
 - [ ] Implemented graceful error handling
 - [ ] Added resilience patterns for flaky tests
 - [ ] Created comprehensive error analysis
+
+**✅ Advanced API Validation**:
+- [ ] Implemented schema validation for API responses
+- [ ] Added performance testing for API endpoints
+- [ ] Created security validation for API calls
+- [ ] Built comprehensive assertion helpers
 
 **✅ Production Readiness**:
 - [ ] Environment-specific configurations

@@ -1,7 +1,7 @@
 # 🤖 05. Playwright MCP Integration
 
-> **📚 This is optional advanced content**  
-> Complete the main course modules (01-04) first before exploring MCP integration.
+> **📚 Expert Track - Optional Content**  
+> Complete the core modules (01-03) and Advanced Patterns (04) before exploring this optional MCP integration.
 
 ---
 
