@@ -10,14 +10,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
-
         .quiz-container {
             max-width: 900px;
             margin: 0 auto;
@@ -26,29 +24,24 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             overflow: hidden;
         }
-
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 40px 30px;
             text-align: center;
         }
-
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-
         .header p {
             font-size: 1.1em;
             opacity: 0.9;
         }
-
         .content {
             padding: 30px;
         }
-
         .instructions {
             background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
             padding: 20px;
@@ -56,30 +49,25 @@
             margin-bottom: 30px;
             border-left: 5px solid #2196f3;
         }
-
         .instructions h3 {
             color: #1976d2;
             margin-bottom: 15px;
             font-size: 1.3em;
         }
-
         .instructions ul {
             list-style: none;
             padding-left: 0;
         }
-
         .instructions li {
             margin: 8px 0;
             padding-left: 25px;
             position: relative;
         }
-
         .instructions li:before {
             content: "✅";
             position: absolute;
             left: 0;
         }
-
         .task-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -91,7 +79,6 @@
             text-align: center;
             box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
         }
-
         .task-description {
             background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
             padding: 20px;
@@ -100,7 +87,6 @@
             border-left: 5px solid #2E86AB;
             box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
-
         .context-box {
             background: linear-gradient(135deg, #fff8dc 0%, #ffeaa7 100%);
             padding: 18px;
@@ -110,7 +96,6 @@
             border-left: 5px solid #ffc107;
             box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
-
         .prompt-template {
             background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%);
             padding: 20px;
@@ -120,7 +105,6 @@
             border-left: 5px solid #6c757d;
             box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
-
         .question {
             margin: 25px 0;
             padding: 25px;
@@ -130,12 +114,10 @@
             border: 1px solid #e9ecef;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .question:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 24px rgba(0,0,0,0.12);
         }
-
         .question-title {
             font-weight: bold;
             color: #333;
@@ -144,7 +126,6 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #e9ecef;
         }
-
         .option {
             margin: 12px 0;
             padding: 12px;
@@ -152,18 +133,15 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-
         .option:hover {
             background-color: #f8f9fa;
             transform: translateX(5px);
         }
-
         .option input[type="radio"] {
             margin-right: 15px;
             transform: scale(1.3);
             accent-color: #667eea;
         }
-
         .option label {
             cursor: pointer;
             padding: 8px;
@@ -172,7 +150,6 @@
             display: block;
             font-size: 1.05em;
         }
-
         .submit-btn {
             background: linear-gradient(135deg, #28a745, #20c997);
             color: white;
@@ -189,24 +166,20 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
         .submit-btn:hover:not(:disabled) {
             transform: translateY(-3px);
             box-shadow: 0 12px 24px rgba(40, 167, 69, 0.4);
             background: linear-gradient(135deg, #218838, #1dd1a1);
         }
-
         .submit-btn:active:not(:disabled) {
             transform: translateY(0);
         }
-
         .submit-btn:disabled {
             background: linear-gradient(135deg, #6c757d, #adb5bd);
             cursor: not-allowed;
             transform: none;
             box-shadow: 0 4px 8px rgba(108, 117, 125, 0.2);
         }
-
         .results {
             margin-top: 40px;
             padding: 30px;
@@ -215,12 +188,10 @@
             box-shadow: 0 12px 24px rgba(0,0,0,0.1);
             animation: slideIn 0.5s ease-out;
         }
-
         @keyframes slideIn {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .score-excellent { 
             background: linear-gradient(135deg, #28a745, #20c997); 
             color: white; 
@@ -241,18 +212,15 @@
             background: linear-gradient(135deg, #dc3545, #6f42c1); 
             color: white; 
         }
-
         .results h2 {
             font-size: 2.5em;
             margin-bottom: 10px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-
         .results h3 {
             font-size: 1.5em;
             opacity: 0.95;
         }
-
         .detailed-results {
             text-align: left;
             margin-top: 30px;
@@ -261,14 +229,12 @@
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.05);
         }
-
         .detailed-results h3 {
             color: #333;
             margin-bottom: 20px;
             font-size: 1.4em;
             text-align: center;
         }
-
         .result-item {
             margin: 15px 0;
             padding: 20px;
@@ -276,11 +242,9 @@
             transition: transform 0.2s ease;
             border-left: 5px solid;
         }
-
         .result-item:hover {
             transform: translateX(5px);
         }
-
         .correct { 
             background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); 
             border-left-color: #28a745;
@@ -291,7 +255,6 @@
             border-left-color: #dc3545;
             box-shadow: 0 4px 8px rgba(220, 53, 69, 0.1);
         }
-
         .study-tips {
             background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
             padding: 25px;
@@ -300,22 +263,18 @@
             border-left: 5px solid #2196f3;
             box-shadow: 0 8px 16px rgba(33, 150, 243, 0.1);
         }
-
         .study-tips h4 {
             color: #1976d2;
             margin-bottom: 15px;
             font-size: 1.3em;
         }
-
         .study-tips ul {
             padding-left: 20px;
         }
-
         .study-tips li {
             margin: 10px 0;
             font-size: 1.05em;
         }
-
         .footer {
             background: #333;
             color: white;
@@ -323,25 +282,20 @@
             padding: 20px;
             margin-top: 40px;
         }
-
         @media (max-width: 768px) {
             .quiz-container {
                 margin: 10px;
                 border-radius: 15px;
             }
-            
             .header {
                 padding: 30px 20px;
             }
-            
             .header h1 {
                 font-size: 2em;
             }
-            
             .content {
                 padding: 20px;
             }
-            
             .question {
                 padding: 20px;
             }
@@ -354,7 +308,6 @@
             <h1>🧠 Interactive Quiz</h1>
             <p>GenAI Prompt Engineering for Testing</p>
         </div>
-        
         <div class="content">
             <div class="instructions">
                 <h3>📋 Instructions</h3>
@@ -367,12 +320,9 @@
                 </ul>
                 <p style="margin-top: 15px; font-weight: bold; color: #1976d2;">Good luck! 🍀</p>
             </div>
-
             <div id="quiz-form">
                 <!-- Task 1 -->
-                <div class="task-header">
-                    📝 Task 1
-                </div>
+                <div class="task-header">📝 Task 1</div>
                 <div class="task-description">
                     <strong>Task:</strong> Rewrite the following prompt to make it clearer, better structured, and with a specific instruction: "Make me test cases for the login page"
                 </div>
@@ -383,55 +333,20 @@
                     <strong>Prompt Template:</strong><br>
                     "Based on the following User Story, '___1___' five functional test cases (both '___2___') for the login page"
                 </div>
-                
                 <div class="question">
                     <div class="question-title">1.1 Fill in blank 1:</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q1_1" value="0" data-correct="2">
-                            A) Make
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q1_1" value="1" data-correct="2">
-                            B) Rewrite
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q1_1" value="2" data-correct="2">
-                            C) Generate
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q1_1" value="0" data-correct="2"> A) Make</label></div>
+                    <div class="option"><label><input type="radio" name="q1_1" value="1" data-correct="2"> B) Rewrite</label></div>
+                    <div class="option"><label><input type="radio" name="q1_1" value="2" data-correct="2"> C) Generate</label></div>
                 </div>
-
                 <div class="question">
                     <div class="question-title">1.2 Fill in blank 2:</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q1_2" value="0" data-correct="0">
-                            A) positive and negative
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q1_2" value="1" data-correct="0">
-                            B) new and old
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q1_2" value="2" data-correct="0">
-                            C) good and bad
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q1_2" value="0" data-correct="0"> A) positive and negative</label></div>
+                    <div class="option"><label><input type="radio" name="q1_2" value="1" data-correct="0"> B) new and old</label></div>
+                    <div class="option"><label><input type="radio" name="q1_2" value="2" data-correct="0"> C) good and bad</label></div>
                 </div>
-
                 <!-- Task 2 -->
-                <div class="task-header">
-                    📝 Task 2
-                </div>
+                <div class="task-header">📝 Task 2</div>
                 <div class="task-description">
                     <strong>Task:</strong> Create a prompt that asks GenAI to generate 3 test cases and return the result in a table format with columns: ID, Title, Steps, Expected Result
                 </div>
@@ -439,55 +354,20 @@
                     <strong>Prompt Template:</strong><br>
                     "Generate 3 functional '___1___' for the user login page. Please provide the '___2___' in table format with the following columns: ID, Test Title, Steps to Execute, Expected Result."
                 </div>
-                
                 <div class="question">
                     <div class="question-title">2.1 Fill in blank 1:</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q2_1" value="0" data-correct="1">
-                            A) test objectives
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q2_1" value="1" data-correct="1">
-                            B) test cases
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q2_1" value="2" data-correct="1">
-                            C) use cases
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q2_1" value="0" data-correct="1"> A) test objectives</label></div>
+                    <div class="option"><label><input type="radio" name="q2_1" value="1" data-correct="1"> B) test cases</label></div>
+                    <div class="option"><label><input type="radio" name="q2_1" value="2" data-correct="1"> C) use cases</label></div>
                 </div>
-
                 <div class="question">
                     <div class="question-title">2.2 Fill in blank 2:</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q2_2" value="0" data-correct="1">
-                            A) thoughts
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q2_2" value="1" data-correct="1">
-                            B) output
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q2_2" value="2" data-correct="1">
-                            C) ideas
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q2_2" value="0" data-correct="1"> A) thoughts</label></div>
+                    <div class="option"><label><input type="radio" name="q2_2" value="1" data-correct="1"> B) output</label></div>
+                    <div class="option"><label><input type="radio" name="q2_2" value="2" data-correct="1"> C) ideas</label></div>
                 </div>
-
                 <!-- Task 3 -->
-                <div class="task-header">
-                    📝 Task 3
-                </div>
+                <div class="task-header">📝 Task 3</div>
                 <div class="task-description">
                     <strong>Task:</strong> Write a prompt that allows GenAI to compare two versions of a User Story and determine which one is better in terms of testability and clarity.
                 </div>
@@ -495,55 +375,20 @@
                     <strong>Prompt Template:</strong><br>
                     "Analyze the following two User Story versions and indicate which one is clearer and more suitable for test case '___1___'. Explain your reasoning. '___2___' step by step."
                 </div>
-                
                 <div class="question">
                     <div class="question-title">3.1 Fill in blank 1:</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q3_1" value="0" data-correct="2">
-                            A) ideas
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q3_1" value="1" data-correct="2">
-                            B) vision
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q3_1" value="2" data-correct="2">
-                            C) generation
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q3_1" value="0" data-correct="2"> A) ideas</label></div>
+                    <div class="option"><label><input type="radio" name="q3_1" value="1" data-correct="2"> B) vision</label></div>
+                    <div class="option"><label><input type="radio" name="q3_1" value="2" data-correct="2"> C) generation</label></div>
                 </div>
-
                 <div class="question">
                     <div class="question-title">3.2 Fill in blank 2:</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q3_2" value="0" data-correct="2">
-                            A) Go
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q3_2" value="1" data-correct="2">
-                            B) Run
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q3_2" value="2" data-correct="2">
-                            C) Think
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q3_2" value="0" data-correct="2"> A) Go</label></div>
+                    <div class="option"><label><input type="radio" name="q3_2" value="1" data-correct="2"> B) Run</label></div>
+                    <div class="option"><label><input type="radio" name="q3_2" value="2" data-correct="2"> C) Think</label></div>
                 </div>
-
                 <!-- Task 4 -->
-                <div class="task-header">
-                    📝 Task 4
-                </div>
+                <div class="task-header">📝 Task 4</div>
                 <div class="task-description">
                     <strong>Task:</strong> Improve the weak prompt: "Write me test cases for my user story" to make it more specific and informative.
                 </div>
@@ -551,55 +396,20 @@
                     <strong>Prompt Template:</strong><br>
                     "Instead of 'Write me test cases for my user story', '___1___': 'Based on the following User Story, generate 5 functional test cases in the '___2___': Title, Steps, Expected Result.'"
                 </div>
-                
                 <div class="question">
                     <div class="question-title">4.1 Fill in blank 1:</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q4_1" value="0" data-correct="0">
-                            A) use
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q4_1" value="1" data-correct="0">
-                            B) remove
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q4_1" value="2" data-correct="0">
-                            C) think
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q4_1" value="0" data-correct="0"> A) use</label></div>
+                    <div class="option"><label><input type="radio" name="q4_1" value="1" data-correct="0"> B) remove</label></div>
+                    <div class="option"><label><input type="radio" name="q4_1" value="2" data-correct="0"> C) think</label></div>
                 </div>
-
                 <div class="question">
                     <div class="question-title">4.2 Fill in blank 2:</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q4_2" value="0" data-correct="1">
-                            A) section
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q4_2" value="1" data-correct="1">
-                            B) format
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q4_2" value="2" data-correct="1">
-                            C) prompt
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q4_2" value="0" data-correct="1"> A) section</label></div>
+                    <div class="option"><label><input type="radio" name="q4_2" value="1" data-correct="1"> B) format</label></div>
+                    <div class="option"><label><input type="radio" name="q4_2" value="2" data-correct="1"> C) prompt</label></div>
                 </div>
-
                 <!-- Task 5 -->
-                <div class="task-header">
-                    📝 Task 5
-                </div>
+                <div class="task-header">📝 Task 5</div>
                 <div class="task-description">
                     <strong>Task:</strong> Fill in the blanks to construct a complete prompt using the "CRAFT" framework. Weak prompt: "Write me test cases for login"
                 </div>
@@ -610,222 +420,85 @@
                     Format: '___2___'<br>
                     Target Audience: software test engineers
                 </div>
-                
                 <div class="question">
                     <div class="question-title">5.1 Fill in blank 1 (Role):</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q5_1" value="0" data-correct="1">
-                            A) You are a prompt engineer
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q5_1" value="1" data-correct="1">
-                            B) You are a senior QC engineer (or "Act as a senior QC engineer")
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q5_1" value="2" data-correct="1">
-                            C) You are the best
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q5_1" value="0" data-correct="1"> A) You are a prompt engineer</label></div>
+                    <div class="option"><label><input type="radio" name="q5_1" value="1" data-correct="1"> B) You are a senior QC engineer (or "Act as a senior QC engineer")</label></div>
+                    <div class="option"><label><input type="radio" name="q5_1" value="2" data-correct="1"> C) You are the best</label></div>
                 </div>
-
                 <div class="question">
                     <div class="question-title">5.2 Fill in blank 2 (Format):</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q5_2" value="0" data-correct="0">
-                            A) Table (or tabular)
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q5_2" value="1" data-correct="0">
-                            B) Interview
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q5_2" value="2" data-correct="0">
-                            C) mp3
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q5_2" value="0" data-correct="0"> A) Table (or tabular)</label></div>
+                    <div class="option"><label><input type="radio" name="q5_2" value="1" data-correct="0"> B) Interview</label></div>
+                    <div class="option"><label><input type="radio" name="q5_2" value="2" data-correct="0"> C) mp3</label></div>
                 </div>
-
-                <!-- Task 6  -->
-                <div class="task-header">
-                    📝 Task 6 
-                </div>
+                <!-- Task 6 -->
+                <div class="task-header">📝 Task 6</div>
                 <div class="task-description">
                     <strong>Example Prompt:</strong> "You are a QA engineer. Create a test plan for the user registration functionality. Consider all edge cases, validation rules, and security aspects. Think step by step."
                 </div>
-                
                 <div class="question">
                     <div class="question-title">6. What prompt engineering technique is demonstrated in this example?</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q6" value="0" data-correct="1">
-                            A) ELI5 (Explain Like I'm 5)
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q6" value="1" data-correct="1">
-                            B) Chain-of-thought
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q6" value="2" data-correct="1">
-                            C) Few-shot
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q6" value="0" data-correct="1"> A) ELI5 (Explain Like I'm 5)</label></div>
+                    <div class="option"><label><input type="radio" name="q6" value="1" data-correct="1"> B) Chain-of-thought</label></div>
+                    <div class="option"><label><input type="radio" name="q6" value="2" data-correct="1"> C) Few-shot</label></div>
                 </div>
-
                 <!-- Task 7 -->
-                <div class="task-header">
-                    📝 Task 7 
-                </div>
+                <div class="task-header">📝 Task 7</div>
                 <div class="task-description">
-                    <strong>Example Prompt:</strong> You are a QA engineer.
-Based on scenario:
-1. Identify two positive test cases.
-2. Identify two negative test cases.
-3. For each, list the main test steps. 
-
-&lt;SCENARIO&gt;
-Feature: Shopping Cart Quantity Update
-Steps:
-  1. User adds "Wireless Mouse" to the cart.
-  2. User changes quantity from 1 to 3.
-  3. Cart subtotal updates from $25.00 to $75.00.
-&lt;/SCENARIO&gt;  
+                    <strong>Example Prompt:</strong> You are a QA engineer.<br>Based on scenario:<br>1. Identify two positive test cases.<br>2. Identify two negative test cases.<br>3. For each, list the main test steps.<br><br>
+                    &lt;SCENARIO&gt;<br>
+                    Feature: Shopping Cart Quantity Update<br>
+                    Steps:<br>
+                      1. User adds "Wireless Mouse" to the cart.<br>
+                      2. User changes quantity from 1 to 3.<br>
+                      3. Cart subtotal updates from $25.00 to $75.00.<br>
+                    &lt;/SCENARIO&gt;
                 </div>
-                
                 <div class="question">
                     <div class="question-title">7. What prompt engineering technique is demonstrated in this example?</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q7" value="0" data-correct="2">
-                            A) Specify the steps
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q7" value="1" data-correct="2">
-                            B) Consider the output
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q7" value="2" data-correct="2">
-                            C) Delimiters
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q7" value="0" data-correct="2"> A) Specify the steps</label></div>
+                    <div class="option"><label><input type="radio" name="q7" value="1" data-correct="2"> B) Consider the output</label></div>
+                    <div class="option"><label><input type="radio" name="q7" value="2" data-correct="2"> C) Delimiters</label></div>
                 </div>
-
-                <!-- Task 8  -->
-                <div class="task-header">
-                    📝 Task 8 
-                </div>
+                <!-- Task 8 -->
+                <div class="task-header">📝 Task 8</div>
                 <div class="task-description">
                     <strong>Example Prompt:</strong> "Act as a senior test automation engineer with 10 years of experience. Create a comprehensive test strategy for API testing of an e-commerce platform's payment processing system."
                 </div>
-                
                 <div class="question">
                     <div class="question-title">8. What prompt engineering technique is demonstrated in this example?</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q8" value="0" data-correct="1">
-                            A) Zero shot
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q8" value="1" data-correct="1">
-                            B) Role prompting
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q8" value="2" data-correct="1">
-                            C) Be specific
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q8" value="0" data-correct="1"> A) Zero shot</label></div>
+                    <div class="option"><label><input type="radio" name="q8" value="1" data-correct="1"> B) Role prompting</label></div>
+                    <div class="option"><label><input type="radio" name="q8" value="2" data-correct="1"> C) Be specific</label></div>
                 </div>
-
-                <!-- Task 9 -->
-                <div class="task-header">
-                    📝 Task 9 
-                </div>
-                <div class="task-description">
-                    <strong>Example Prompt:</strong> "Create test cases for login functionality. Here are two examples:<br><br>
-                    Example 1: Test ID: TC001, Title: Valid Login, Steps: 1. Enter valid email 2. Enter valid password 3. Click Login. Expected Result: User successfully logged in<br><br>
-                    Example 2: Test ID: TC002, Title: Invalid Email, Steps: 1. Enter invalid email format 2. Enter valid password 3. Click Login. Expected Result: Error message displayed<br><br>
-                    Now create similar test cases for the password reset functionality."
-                </div>
-                
+                 <!-- Task 9: corrected input types -->
+                <div class="task-header">📝 Task 9</div>
+                <div class="task-description"><strong>Example Prompt:</strong> "Create test cases for login functionality. Here are two examples:<br><br>
+Example 1: Test ID: TC001, Title: Valid Login, Steps: 1. Enter valid email 2. Enter valid password 3. Click Login. Expected Result: User successfully logged in<br><br>
+Example 2: Test ID: TC002, Title: Invalid Email, Steps: 1. Enter invalid email format 2. Enter valid password 3. Click Login. Expected Result: Error message displayed<br><br>
+Now create similar test cases for the password reset functionality."</div>
                 <div class="question">
                     <div class="question-title">9. What prompt engineering technique is demonstrated in this example?</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q9" value="0" data-correct="2">
-                            A) Zero shot
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q9" value="1" data-correct="2">
-                            B) Role prompting
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q9" value="2" data-correct="2">
-                            C) Few shot
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q9" value="0" data-correct="2"> A) Zero shot</label></div>
+                    <div class="option"><label><input type="radio" name="q9" value="1" data-correct="2"> B) Role prompting</label></div>
+                    <div class="option"><label><input type="radio" name="q9" value="2" data-correct="2"> C) Few shot</label></div>
                 </div>
-
                 <!-- Task 10 -->
-                <div class="task-header">
-                    📝 Task 10 
-                </div>
+                <div class="task-header">📝 Task 10</div>
                 <div class="task-description">
                     <strong>Example Prompt:</strong> "Role: You are a senior QA engineer with expertise in mobile app testing.<br>
                     Task: Create a comprehensive test plan for a mobile banking app's money transfer feature.<br>
                     Format: Provide the test plan in a structured document with sections for: Test Objectives, Test Scenarios, Test Cases (with ID, Title, Steps, Expected Results), and Risk Assessment."
                 </div>
-                
                 <div class="question">
                     <div class="question-title">10. What prompt engineering framework is demonstrated in this example?</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q10" value="0" data-correct="1">
-                            A) CRAFT
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q10" value="1" data-correct="1">
-                            B) RTF
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q10" value="2" data-correct="1">
-                            C) RISEN
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q10" value="0" data-correct="1"> A) CRAFT</label></div>
+                    <div class="option"><label><input type="radio" name="q10" value="1" data-correct="1"> B) RTF</label></div>
+                    <div class="option"><label><input type="radio" name="q10" value="2" data-correct="1"> C) RISEN</label></div>
                 </div>
-
-                <!-- Task 11  -->
-                <div class="task-header">
-                    📝 Task 11 
-                </div>
+                <!-- Task 11 -->
+                <div class="task-header">📝 Task 11</div>
                 <div class="task-description">
                     <strong>Example Prompt:</strong> "Role: Act as an experienced test architect.<br>
                     Instructions: Design a complete testing strategy for an e-commerce checkout process.<br>
@@ -833,66 +506,28 @@ Steps:
                     Expectation: Test strategy document .<br>
                     Narrowing: Focus specifically on payment validation, user data validation, and error handling scenarios."
                 </div>
-                
                 <div class="question">
                     <div class="question-title">11. What prompt engineering framework is demonstrated in this example?</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q11" value="0" data-correct="2">
-                            A) ReAct
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q11" value="1" data-correct="2">
-                            B) RACE
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q11" value="2" data-correct="2">
-                            C) RISEN
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q11" value="0" data-correct="2"> A) ReAct</label></div>
+                    <div class="option"><label><input type="radio" name="q11" value="1" data-correct="2"> B) RACE</label></div>
+                    <div class="option"><label><input type="radio" name="q11" value="2" data-correct="2"> C) RISEN</label></div>
                 </div>
-
-                <!-- Task 12  -->
-                <div class="task-header">
-                    📝 Task 12
-                </div>
+                <!-- Task 12 -->
+                <div class="task-header">📝 Task 12</div>
                 <div class="task-description">
                     <strong>Example Prompt:</strong> "Role: You are a senior automation test engineer.<br>
                     Action: Create automated test scripts for user authentication system.<br>
                     Context: The system handles login, logout, password reset, and account lockout functionality. It must be secure and user-friendly.<br>
                     Expectation: Provide complete test automation framework setup with test cases covering all authentication scenarios, including edge cases and security testing."
                 </div>
-                
                 <div class="question">
                     <div class="question-title">12. What prompt engineering framework is demonstrated in this example?</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q12" value="0" data-correct="0">
-                            A) RACE
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q12" value="1" data-correct="0">
-                            B) CRAFT
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q12" value="2" data-correct="0">
-                            C) ReAct
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q12" value="0" data-correct="0"> A) RACE</label></div>
+                    <div class="option"><label><input type="radio" name="q12" value="1" data-correct="0"> B) CRAFT</label></div>
+                    <div class="option"><label><input type="radio" name="q12" value="2" data-correct="0"> C) ReAct</label></div>
                 </div>
-
                 <!-- Task 13 -->
-                <div class="task-header">
-                    📝 Task 13
-                </div>
+                <div class="task-header">📝 Task 13</div>
                 <div class="task-description">
                     <strong>Example Prompt:</strong> "Character: You are an expert performance testing specialist.<br>
                     Request: Design a comprehensive performance testing strategy for a social media platform.<br>
@@ -901,108 +536,50 @@ Steps:
                     Type of output: Detailed performance testing plan with test scenarios, success criteria, and monitoring metrics.<br>
                     Extras: Include recommendations for performance optimization and bottleneck identification."
                 </div>
-                
                 <div class="question">
                     <div class="question-title">13. What prompt engineering framework is demonstrated in this example?</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q13" value="0" data-correct="1">
-                            A) RTF
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q13" value="1" data-correct="1">
-                            B) CREATE
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q13" value="2" data-correct="1">
-                            C) RISEN
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q13" value="0" data-correct="1"> A) RTF</label></div>
+                    <div class="option"><label><input type="radio" name="q13" value="1" data-correct="1"> B) CREATE</label></div>
+                    <div class="option"><label><input type="radio" name="q13" value="2" data-correct="1"> C) RISEN</label></div>
                 </div>
-				
-				 <!-- Task 14 -->
-                <div class="task-header">
-                    📝 Task 14 
-                </div>
+                <!-- Task 14 -->
+                <div class="task-header">📝 Task 14</div>
                 <div class="task-description">
                     <strong>Example Prompt:</strong> "Role: You are a senior QC engineer specializing in user flows and edge-case analysis. Instructions: Generate a list of edge-case test scenarios for a password reset form in a banking web application. Steps: 1. Identify inputs typically used in password reset. 2. Consider unusual, invalid, or rare input values. 3. Describe what the system should do in response to each case. Narrowing: Exclude scenarios related to UI layout or styling. Focus only on input data, error handling, and backend validation."
                 </div>
-                
                 <div class="question">
                     <div class="question-title">14. What component of the given framework is missing from this prompt?</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q14" value="0" data-correct="2">
-                            A) Format: Markdown bullet points
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q14" value="1" data-correct="2">
-                            B) Context: A new checkout page for an e-commerce website
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q14" value="2" data-correct="2">
-                            C) Expectation: The output should include at least 5 edge-case scenarios, each in bullet-point format with a short expected result
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q14" value="0" data-correct="2"> A) Format: Markdown bullet points</label></div>
+                    <div class="option"><label><input type="radio" name="q14" value="1" data-correct="2"> B) Context: A new checkout page for an e-commerce website</label></div>
+                    <div class="option"><label><input type="radio" name="q14" value="2" data-correct="2"> C) Expectation: The output should include at least 5 edge-case scenarios, each in bullet-point format with a short expected result</label></div>
                 </div>
-				
-				 <!-- Task 15  -->
-                <div class="task-header">
-                    📝 Task 15 
-                </div>
+                <!-- Task 15 -->
+                <div class="task-header">📝 Task 15</div>
                 <div class="task-description">
                     <strong>Example Prompt:</strong> "Role: You are a senior QA engineer specializing in mobile testing. Format: Use a table with columns for title, steps, and expected result."
                 </div>
-                
                 <div class="question">
                     <div class="question-title">15. What component of the given framework is missing from this prompt?</div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q15" value="0" data-correct="0">
-                            A) Task: Write 5 test cases for validating push notifications in an iOS app
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q15" value="1" data-correct="0">
-                            B) Examples: Include one example of valid and one of invalid data
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q15" value="2" data-correct="0">
-                            C) Target Audience: Junior QC engineers in training
-                        </label>
-                    </div>
+                    <div class="option"><label><input type="radio" name="q15" value="0" data-correct="0"> A) Task: Write 5 test cases for validating push notifications in an iOS app</label></div>
+                    <div class="option"><label><input type="radio" name="q15" value="1" data-correct="0"> B) Examples: Include one example of valid and one of invalid data</label></div>
+                    <div class="option"><label><input type="radio" name="q15" value="2" data-correct="0"> C) Target Audience: Junior QC engineers in training</label></div>
                 </div>
-
-
-
                 <button class="submit-btn" id="submitBtn" onclick="submitQuiz()" disabled>🚀 Submit Quiz</button>
             </div>
-            
             <div id="results" style="display: none;"></div>
         </div>
-        
         <div class="footer">
-            <p>📚 Quiz Topic: GenAI Prompt Engineering for Testing | Total Questions: 13</p>
+            <p>📚 Quiz Topic: GenAI Prompt Engineering for Testing | Total Questions: 20</p>
         </div>
     </div>
-
     <script>
         // Check if all questions are answered
         function checkAllAnswered() {
-            const totalQuestions = 13;
-            const questionNames = ['q1_1', 'q1_2', 'q2_1', 'q2_2', 'q3_1', 'q3_2', 'q4_1', 'q4_2', 'q5_1', 'q5_2', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13'];
-            
+            const questionNames = [
+                'q1_1','q1_2','q2_1','q2_2','q3_1','q3_2',
+                'q4_1','q4_2','q5_1','q5_2',
+                'q6','q7','q8','q9','q10','q11','q12','q13','q14','q15'
+            ];
             let answeredCount = 0;
             questionNames.forEach(name => {
                 const radios = document.querySelectorAll(`input[name="${name}"]`);
@@ -1013,7 +590,6 @@ Steps:
                     }
                 }
             });
-            
             const submitBtn = document.getElementById('submitBtn');
             if (answeredCount === questionNames.length) {
                 submitBtn.disabled = false;
@@ -1024,133 +600,98 @@ Steps:
             }
         }
 
-        // Add event listeners to all radio buttons
         document.addEventListener('DOMContentLoaded', function() {
-            const allRadios = document.querySelectorAll('input[type="radio"]');
-            allRadios.forEach(radio => {
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
                 radio.addEventListener('change', checkAllAnswered);
             });
-            checkAllAnswered(); // Initial check
+            checkAllAnswered();
         });
 
         function submitQuiz() {
             const form = document.getElementById('quiz-form');
             const resultsDiv = document.getElementById('results');
-            
-            let totalQuestions = 0;
-            let correctAnswers = 0;
-            let detailedResults = [];
-            
-            // Define the options for each question
+            let totalQuestions = 0, correctAnswers = 0;
+            const detailedResults = [];
+
             const questionOptions = {
-                'q1_1': ['A) Make', 'B) Rewrite', 'C) Generate'],
-                'q1_2': ['A) positive and negative', 'B) new and old', 'C) good and bad'],
-                'q2_1': ['A) test objectives', 'B) test cases', 'C) use cases'],
-                'q2_2': ['A) thoughts', 'B) output', 'C) ideas'],
-                'q3_1': ['A) ideas', 'B) vision', 'C) generation'],
-                'q3_2': ['A) Go', 'B) Run', 'C) Think'],
-                'q4_1': ['A) use', 'B) remove', 'C) think'],
-                'q4_2': ['A) section', 'B) format', 'C) prompt'],
-                'q5_1': ['A) You are a prompt engineer', 'B) You are a senior QC engineer (or "Act as a senior QC engineer")', 'C) You are the best'],
-                'q5_2': ['A) Table (or tabular)', 'B) Interview', 'C) mp3'],
-                'q6': ['A) ELI5 (Explain Like I\'m 5)', 'B) Chain-of-thought', 'C) Few-shot'],
-                'q7': ['A) Specify the steps', 'B) Consider the output', 'C) Delimiters'],
-                'q8': ['A) Zero shot', 'B) Role prompting', 'C) Be specific'],
-                'q9': ['A) Zero shot', 'B) Role prompting', 'C) Few shot'],
-                'q10': ['A) CRAFT', 'B) RTF', 'C) RISEN'],
-                'q11': ['A) ReAct', 'B) RACE', 'C) RISEN'],
-                'q12': ['A) RACE', 'B) CRAFT', 'C) ReAct'],
-                'q13': ['A) RTF', 'B) CREATE', 'C) RISEN']
+                'q1_1': ['A) Make','B) Rewrite','C) Generate'],
+                'q1_2': ['A) positive and negative','B) new and old','C) good and bad'],
+                'q2_1': ['A) test objectives','B) test cases','C) use cases'],
+                'q2_2': ['A) thoughts','B) output','C) ideas'],
+                'q3_1': ['A) ideas','B) vision','C) generation'],
+                'q3_2': ['A) Go','B) Run','C) Think'],
+                'q4_1': ['A) use','B) remove','C) think'],
+                'q4_2': ['A) section','B) format','C) prompt'],
+                'q5_1': ['A) You are a prompt engineer','B) You are a senior QC engineer (or "Act as a senior QC engineer")','C) You are the best'],
+                'q5_2': ['A) Table (or tabular)','B) Interview','C) mp3'],
+                'q6':   ['A) ELI5 (Explain Like I\'m 5)','B) Chain-of-thought','C) Few-shot'],
+                'q7':   ['A) Specify the steps','B) Consider the output','C) Delimiters'],
+                'q8':   ['A) Zero shot','B) Role prompting','C) Be specific'],
+                'q9':   ['A) Zero shot','B) Role prompting','C) Few shot'],
+                'q10':  ['A) CRAFT','B) RTF','C) RISEN'],
+                'q11':  ['A) ReAct','B) RACE','C) RISEN'],
+                'q12':  ['A) RACE','B) CRAFT','C) ReAct'],
+                'q13':  ['A) RTF','B) CREATE','C) RISEN'],
+                'q14':  ['A) Format: Markdown bullet points','B) Context: A new checkout page for an e-commerce website','C) Expectation: The output should include at least 5 edge-case scenarios, each in bullet-point format with a short expected result'],
+                'q15':  ['A) Task: Write 5 test cases for validating push notifications in an iOS app','B) Examples: Include one example of valid and one of invalid data','C) Target Audience: Junior QC engineers in training']
             };
-            
-            // Get all radio button groups
-            const questionGroups = {};
-            const radios = form.querySelectorAll('input[type="radio"]');
-            
-            radios.forEach(radio => {
-                const name = radio.name;
-                if (!questionGroups[name]) {
-                    questionGroups[name] = {
-                        selected: null,
-                        correct: parseInt(radio.dataset.correct)
-                    };
+
+            // gather selected answers and compare
+            const groups = {};
+            form.querySelectorAll('input[type="radio"]').forEach(radio => {
+                if (!groups[radio.name]) {
+                    groups[radio.name] = { selected: null, correct: parseInt(radio.dataset.correct) };
                 }
-                
                 if (radio.checked) {
-                    questionGroups[name].selected = parseInt(radio.value);
+                    groups[radio.name].selected = parseInt(radio.value);
                 }
             });
-            
-            // Calculate results
-            Object.keys(questionGroups).forEach(questionName => {
+
+            Object.keys(groups).forEach(name => {
                 totalQuestions++;
-                const q = questionGroups[questionName];
-                const isCorrect = q.selected === q.correct;
-                
-                if (isCorrect) {
-                    correctAnswers++;
-                }
-                
-                const options = questionOptions[questionName];
-                
+                const { selected, correct } = groups[name];
+                const isCorrect = selected === correct;
+                if (isCorrect) correctAnswers++;
+                const opts = questionOptions[name] || [];
                 detailedResults.push({
-                    question: questionName.replace('_', '.'),
-                    selected: q.selected !== null ? options[q.selected] : 'No answer',
-                    correct: options[q.correct],
-                    isCorrect: isCorrect
+                    question: name.replace('_','.'), 
+                    selected: opts[selected] || 'No answer', 
+                    correct: opts[correct] || 'Unknown', 
+                    isCorrect
                 });
             });
-            
-            const percentage = (correctAnswers / totalQuestions) * 100;
-            
-            // Determine grade and styling
-            let grade, className;
-            if (percentage >= 90) {
-                grade = "🏆 Excellent!";
-                className = "score-excellent";
-            } else if (percentage >= 80) {
-                grade = "🎉 Great job!";
-                className = "score-great";
-            } else if (percentage >= 70) {
-                grade = "👍 Good work!";
-                className = "score-good";
-            } else if (percentage >= 60) {
-                grade = "📚 Keep studying!";
-                className = "score-study";
-            } else {
-                grade = "💪 Practice more!";
-                className = "score-practice";
-            }
-            
-            // Display results
-            let resultsHTML = `
-                <div class="results ${className}">
+
+            const percent = (correctAnswers/totalQuestions)*100;
+            let grade='', cls='';
+            if (percent >=90)       { grade="🏆 Excellent!"; cls="score-excellent"; }
+            else if (percent>=80)   { grade="🎉 Great job!"; cls="score-great"; }
+            else if (percent>=70)   { grade="👍 Good work!"; cls="score-good"; }
+            else if (percent>=60)   { grade="📚 Keep studying!"; cls="score-study"; }
+            else                    { grade="💪 Practice more!"; cls="score-practice"; }
+
+            let html = `
+                <div class="results ${cls}">
                     <h2>${grade}</h2>
-                    <h3>Score: ${correctAnswers}/${totalQuestions} (${percentage.toFixed(1)}%)</h3>
+                    <h3>Score: ${correctAnswers}/${totalQuestions} (${percent.toFixed(1)}%)</h3>
                 </div>
-                
                 <div class="detailed-results">
                     <h3>📊 Detailed Results</h3>
             `;
-            
-            detailedResults.forEach(result => {
-                const statusClass = result.isCorrect ? 'correct' : 'incorrect';
-                const statusIcon = result.isCorrect ? '✅' : '❌';
-                
-                resultsHTML += `
-                    <div class="result-item ${statusClass}">
-                        <strong>Question ${result.question}</strong> ${statusIcon}<br>
-                        <strong>Your answer:</strong> ${result.selected}<br>
-                        ${!result.isCorrect ? `<strong>Correct answer:</strong> ${result.correct}<br>` : ''}
+            detailedResults.forEach(r => {
+                const status = r.isCorrect ? 'correct' : 'incorrect';
+                const icon   = r.isCorrect ? '✅' : '❌';
+                html += `
+                    <div class="result-item ${status}">
+                        <strong>Question ${r.question}</strong> ${icon}<br>
+                        <strong>Your answer:</strong> ${r.selected}<br>
+                        ${!r.isCorrect ? `<strong>Correct answer:</strong> ${r.correct}<br>` : ''}
                     </div>
                 `;
             });
-            
-            resultsHTML += '</div>';
-            
-            // Add study tips for lower scores
-            if (percentage < 80) {
-                resultsHTML += `
+            html += '</div>';
+
+            if (percent < 80) {
+                html += `
                     <div class="study-tips">
                         <h4>💡 Study Recommendations</h4>
                         <ul>
@@ -1163,8 +704,8 @@ Steps:
                     </div>
                 `;
             }
-            
-            resultsDiv.innerHTML = resultsHTML;
+
+            resultsDiv.innerHTML = html;
             resultsDiv.style.display = 'block';
             resultsDiv.scrollIntoView({ behavior: 'smooth' });
         }
