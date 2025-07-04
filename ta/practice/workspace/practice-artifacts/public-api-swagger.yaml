@@ -1,0 +1,776 @@
+openapi: 3.0.3
+info:
+  title: JSONPlaceholder API - Enhanced for Testing Practice
+  description: |
+    A comprehensive REST API for testing and prototyping, perfect for learning API test automation with Cursor AI.
+    
+    This specification covers the popular JSONPlaceholder API with additional test scenarios for practice.
+    
+    **Base URL**: `https://jsonplaceholder.typicode.com`
+    
+    **Perfect for practicing**:
+    - CRUD operations testing
+    - Response validation
+    - Error handling
+    - Data contract testing
+    - Performance testing
+    
+    **Cursor AI Prompts to try**:
+    ```
+    Create Playwright API tests for this OpenAPI spec covering all CRUD operations
+    ```
+    
+    ```
+    Generate API tests with response validation and error scenarios
+    ```
+  version: 1.0.0
+  contact:
+    name: JSONPlaceholder API
+    url: https://jsonplaceholder.typicode.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: https://jsonplaceholder.typicode.com
+    description: JSONPlaceholder public API server
+
+tags:
+  - name: posts
+    description: Blog posts operations  
+  - name: comments
+    description: Post comments operations
+  - name: albums
+    description: Photo albums operations
+  - name: photos
+    description: Photos operations
+  - name: todos
+    description: Todo items operations
+  - name: users
+    description: User management operations
+
+paths:
+  /posts:
+    get:
+      tags:
+        - posts
+      summary: Get all posts
+      description: Retrieve a list of all blog posts
+      parameters:
+        - name: userId
+          in: query
+          description: Filter posts by user ID
+          required: false
+          schema:
+            type: integer
+            example: 1
+        - name: _limit
+          in: query
+          description: Limit the number of results
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            example: 10
+        - name: _start
+          in: query
+          description: Start index for pagination
+          required: false
+          schema:
+            type: integer
+            minimum: 0
+            example: 0
+      responses:
+        '200':
+          description: List of posts retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+              examples:
+                posts_list:
+                  value:
+                    - id: 1
+                      userId: 1
+                      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+                      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        '400':
+          description: Bad request - invalid parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    post:
+      tags:
+        - posts
+      summary: Create a new post
+      description: Create a new blog post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInput'
+            examples:
+              new_post:
+                value:
+                  title: "Learning API Testing with Cursor AI"
+                  body: "This post covers how to use Cursor AI for API test automation"
+                  userId: 1
+      responses:
+        '201':
+          description: Post created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+              examples:
+                created_post:
+                  value:
+                    id: 101
+                    userId: 1
+                    title: "Learning API Testing with Cursor AI"
+                    body: "This post covers how to use Cursor AI for API test automation"
+        '422':
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+
+  /posts/{id}:
+    get:
+      tags:
+        - posts
+      summary: Get a specific post
+      description: Retrieve a single post by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Post ID
+          schema:
+            type: integer
+            minimum: 1
+            example: 1
+      responses:
+        '200':
+          description: Post retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '404':
+          description: Post not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    put:
+      tags:
+        - posts
+      summary: Update a post (full replacement)
+      description: Replace all fields of an existing post
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Post ID
+          schema:
+            type: integer
+            minimum: 1
+            example: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInput'
+            examples:
+              update_post:
+                value:
+                  title: "Updated: Learning API Testing with Cursor AI"
+                  body: "This updated post covers advanced API testing techniques"
+                  userId: 1
+      responses:
+        '200':
+          description: Post updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '404':
+          description: Post not found
+        '422':
+          description: Validation error
+
+    patch:
+      tags:
+        - posts
+      summary: Partially update a post
+      description: Update specific fields of an existing post
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Post ID
+          schema:
+            type: integer
+            minimum: 1
+            example: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPartialInput'
+            examples:
+              patch_title:
+                value:
+                  title: "Patched: New Title for Post"
+      responses:
+        '200':
+          description: Post updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '404':
+          description: Post not found
+
+    delete:
+      tags:
+        - posts
+      summary: Delete a post
+      description: Remove a post by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Post ID
+          schema:
+            type: integer
+            minimum: 1
+            example: 1
+      responses:
+        '200':
+          description: Post deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Post deleted"
+        '404':
+          description: Post not found
+
+  /posts/{id}/comments:
+    get:
+      tags:
+        - comments
+      summary: Get comments for a post
+      description: Retrieve all comments for a specific post
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Post ID
+          schema:
+            type: integer
+            minimum: 1
+            example: 1
+      responses:
+        '200':
+          description: Comments retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Comment'
+
+  /comments:
+    get:
+      tags:
+        - comments
+      summary: Get all comments
+      description: Retrieve all comments, optionally filtered by post
+      parameters:
+        - name: postId
+          in: query
+          description: Filter comments by post ID
+          required: false
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Comments retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Comment'
+
+    post:
+      tags:
+        - comments
+      summary: Create a new comment
+      description: Add a comment to a post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CommentInput'
+      responses:
+        '201':
+          description: Comment created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Comment'
+
+  /todos:
+    get:
+      tags:
+        - todos
+      summary: Get all todos
+      description: Retrieve all todo items
+      parameters:
+        - name: userId
+          in: query
+          description: Filter todos by user ID
+          required: false
+          schema:
+            type: integer
+            example: 1
+        - name: completed
+          in: query
+          description: Filter by completion status
+          required: false
+          schema:
+            type: boolean
+            example: false
+      responses:
+        '200':
+          description: Todos retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Todo'
+
+    post:
+      tags:
+        - todos
+      summary: Create a new todo
+      description: Create a new todo item
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TodoInput'
+      responses:
+        '201':
+          description: Todo created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+
+  /todos/{id}:
+    get:
+      tags:
+        - todos
+      summary: Get a specific todo
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Todo retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+
+    patch:
+      tags:
+        - todos
+      summary: Update todo completion status
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            example: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                completed:
+                  type: boolean
+                  example: true
+      responses:
+        '200':
+          description: Todo updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+
+  /users:
+    get:
+      tags:
+        - users
+      summary: Get all users
+      responses:
+        '200':
+          description: Users retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+
+  /users/{id}:
+    get:
+      tags:
+        - users
+      summary: Get a specific user
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: User retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+components:
+  schemas:
+    Post:
+      type: object
+      required:
+        - id
+        - userId
+        - title
+        - body
+      properties:
+        id:
+          type: integer
+          description: Unique post identifier
+          example: 1
+        userId:
+          type: integer
+          description: ID of the user who created the post
+          example: 1
+        title:
+          type: string
+          description: Post title
+          maxLength: 255
+          example: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+        body:
+          type: string
+          description: Post content
+          example: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+
+    PostInput:
+      type: object
+      required:
+        - title
+        - body
+        - userId
+      properties:
+        title:
+          type: string
+          maxLength: 255
+          minLength: 1
+          example: "Learning API Testing with Cursor AI"
+        body:
+          type: string
+          minLength: 1
+          example: "This post covers how to use Cursor AI for API test automation"
+        userId:
+          type: integer
+          minimum: 1
+          example: 1
+
+    PostPartialInput:
+      type: object
+      properties:
+        title:
+          type: string
+          maxLength: 255
+          example: "Updated Title"
+        body:
+          type: string
+          example: "Updated content"
+        userId:
+          type: integer
+          minimum: 1
+
+    Comment:
+      type: object
+      required:
+        - id
+        - postId
+        - name
+        - email
+        - body
+      properties:
+        id:
+          type: integer
+          example: 1
+        postId:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: "id labore ex et quam laborum"
+        email:
+          type: string
+          format: email
+          example: "Eliseo@gardner.biz"
+        body:
+          type: string
+          example: "laudantium enim quasi est quidem magnam voluptate ipsam eos"
+
+    CommentInput:
+      type: object
+      required:
+        - postId
+        - name
+        - email
+        - body
+      properties:
+        postId:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: "Great post!"
+        email:
+          type: string
+          format: email
+          example: "commenter@example.com"
+        body:
+          type: string
+          example: "This is a helpful comment on the post"
+
+    Todo:
+      type: object
+      required:
+        - id
+        - userId
+        - title
+        - completed
+      properties:
+        id:
+          type: integer
+          example: 1
+        userId:
+          type: integer
+          example: 1
+        title:
+          type: string
+          example: "delectus aut autem"
+        completed:
+          type: boolean
+          example: false
+
+    TodoInput:
+      type: object
+      required:
+        - userId
+        - title
+      properties:
+        userId:
+          type: integer
+          minimum: 1
+          example: 1
+        title:
+          type: string
+          minLength: 1
+          maxLength: 200
+          example: "Learn API testing with Playwright"
+        completed:
+          type: boolean
+          default: false
+          example: false
+
+    User:
+      type: object
+      required:
+        - id
+        - name
+        - username
+        - email
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: "Leanne Graham"
+        username:
+          type: string
+          example: "Bret"
+        email:
+          type: string
+          format: email
+          example: "Sincere@april.biz"
+        address:
+          $ref: '#/components/schemas/Address'
+        phone:
+          type: string
+          example: "1-770-736-8031 x56442"
+        website:
+          type: string
+          format: uri
+          example: "hildegard.org"
+        company:
+          $ref: '#/components/schemas/Company'
+
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+          example: "Kulas Light"
+        suite:
+          type: string
+          example: "Apt. 556"
+        city:
+          type: string
+          example: "Gwenborough"
+        zipcode:
+          type: string
+          example: "92998-3874"
+        geo:
+          $ref: '#/components/schemas/Geo'
+
+    Geo:
+      type: object
+      properties:
+        lat:
+          type: string
+          example: "-37.3159"
+        lng:
+          type: string
+          example: "81.1496"
+
+    Company:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Romaguera-Crona"
+        catchPhrase:
+          type: string
+          example: "Multi-layered client-server neural-net"
+        bs:
+          type: string
+          example: "harness real-time e-markets"
+
+    Error:
+      type: object
+      required:
+        - error
+        - message
+      properties:
+        error:
+          type: string
+          example: "Not Found"
+        message:
+          type: string
+          example: "The requested resource was not found"
+        code:
+          type: integer
+          example: 404
+
+    ValidationError:
+      type: object
+      required:
+        - error
+        - message
+        - details
+      properties:
+        error:
+          type: string
+          example: "Validation Error"
+        message:
+          type: string
+          example: "Request validation failed"
+        details:
+          type: array
+          items:
+            type: object
+            properties:
+              field:
+                type: string
+                example: "title"
+              code:
+                type: string
+                example: "REQUIRED"
+              message:
+                type: string
+                example: "Title is required"
+
+# Test Scenarios for Cursor AI Practice:
+# 
+# 1. CRUD Operations:
+#    - Create, read, update, delete posts
+#    - Verify response status codes and data
+#    - Test with valid and invalid data
+#
+# 2. Data Validation:
+#    - Test required fields
+#    - Test field length limits
+#    - Test data types and formats
+#
+# 3. Error Handling:
+#    - Test 404 responses for non-existent resources
+#    - Test 422 validation errors
+#    - Test malformed requests
+#
+# 4. Filtering and Pagination:
+#    - Test query parameters
+#    - Test pagination with _limit and _start
+#    - Test filtering by userId
+#
+# 5. Relationships:
+#    - Test post-comments relationships
+#    - Test user-posts relationships
+#    - Test user-todos relationships
+#
+# 6. Performance Testing:
+#    - Response time validation
+#    - Concurrent request handling
+#    - Rate limiting behavior 

@@ -1,0 +1,55 @@
+{
+  "name": "ai-test-automation-practicum",
+  "version": "1.0.0",
+  "description": "Learn AI-assisted test automation with TypeScript and Playwright using Cursor",
+  "main": "index.js",
+  "scripts": {
+    "setup-check": "node scripts/setup-verification.js",
+    "build": "tsc",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:practice": "playwright test practice-artifacts/",
+    "dev": "playwright test --ui",
+    "start": "npm run setup-check",
+    "install:browsers": "playwright install",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "eslint . --ext .ts,.js --fix",
+    "format": "prettier --write .",
+    "clean": "rimraf dist test-results playwright-report"
+  },
+  "keywords": [
+    "ai",
+    "test-automation",
+    "playwright",
+    "typescript",
+    "cursor",
+    "copilot",
+    "windsurf",
+    "testing",
+    "practicum",
+    "ai-assisted"
+  ],
+  "author": "AI Test Automation Course",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.8.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.50.0",
+    "eslint-plugin-playwright": "^0.16.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.2.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "dotenv": "^16.3.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  }
+}
