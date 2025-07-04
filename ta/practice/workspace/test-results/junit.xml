@@ -1,0 +1,26 @@
+<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="7.455452999999999">
+<testsuite name="e2e/robust-locators.spec.ts" timestamp="2025-07-01T09:45:11.863Z" hostname="chromium" tests="4" failures="0" skipped="0" time="16.382" errors="0">
+<testcase name="Robust locator strategies for dynamic content › 1. Adding new todo items with robust locators" classname="e2e/robust-locators.spec.ts" time="4.144">
+</testcase>
+<testcase name="Robust locator strategies for dynamic content › 2. Filtering todos by status with robust locators" classname="e2e/robust-locators.spec.ts" time="4.078">
+</testcase>
+<testcase name="Robust locator strategies for dynamic content › 3. Bulk selection with checkboxes using robust locators" classname="e2e/robust-locators.spec.ts" time="4.024">
+<system-out>
+<![CDATA[Remaining unchecked checkboxes: 2
+Completed items: 0 out of 2 total
+]]>
+</system-out>
+</testcase>
+<testcase name="Robust locator strategies for dynamic content › 4. Drag and drop reordering with robust locators" classname="e2e/robust-locators.spec.ts" time="4.136">
+<system-out>
+<![CDATA[First todo: "
+                                Learn Playwright automation
+                            " (ID: 1)
+Second todo: "
+                                Set up testing environment
+                            " (ID: 2)
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
